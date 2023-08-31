@@ -20,3 +20,5 @@
 # General important notes
 * Use gifs to represent each project to limit the need for downloads
 * Use recognizable icons such as gmail, github, linkedin
+* SnakeGameAI ran 200 games before its showcase
+* 3DAI ran for 30 minutes before its showcase
