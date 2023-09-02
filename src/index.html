@@ -5,81 +5,109 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="../dist/output.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<script src="script.js"></script>
 </head>
 <body>
-	<div class="text-3xl text-center text-white">
-		Hi. Our names are <b>Justin</b> and <b>Nathaniel Hernandez</b> and<br>
-    we are twins aspiring to become future software developers.
-	</div>
-  <br>
-  <div class="text-xl text-center text-white">
-    Both of us are students at the University of California San Diego and<br>
-    are currently studying for a B.S. in Mathematics-Computer Science...
-  </div>
+  <script src="script.js"></script>
+  <nav class="sticky top-0 text-left pl-5 pt-5 pb-5 bg-black z-50">
+    <a id="TopBar" onclick="smoothScroll(document.body)" target="_self"
+      class="text-white underline text-2xl">
+      BACK TO TOP
+    </a>
+  </nav>
+	<header>
+    <div id="Intro" class="mt-16 mb-80 mx-5 opacity-100 transition duration-500 ease-in">
+      <div class="text-3xl text-center text-white">
+        Hi. Our names are <b>Justin</b> and <b>Nathaniel Hernandez</b> and<br>
+        we are twins aspiring to become software developers.
+      </div>
+      <br>
+      <div class="text-xl text-center text-white">
+        Both of us are studying at the University of California San Diego and<br>
+        are currently working towards a B.S. in Mathematics-Computer Science...
+      </div>
+    </div>
+  </header>
   <br>
   <h1 class="text-3xl text-white text-center underline">Our Group Projects:</h1>
 	<br>
-  <div class="text-3xl text-center text-white">
-    <a href="https://minesweeper-em9.pages.dev" class="hover:text-black" target="_blank">Minesweeper</a>
-  </div>
-  <br>
-	<div class="grid grid-cols-2 justify-items-center">
-    <div class="text-xl text-center text-white">
-      Game made over the summer that helped us learn React: a framework that uses <br>
-      HTML, JavaScript, and CSS and allows for the programer to make their own tags and stuff...
+  <div id="Minesweeper" class="mt-10 mb-80 mx-5">
+    <div class="text-3xl text-center text-white">
+      <a href="https://minesweeper-em9.pages.dev" class="hover:text-black" target="_blank">Minesweeper</a>
     </div>
-		<video width="320" height="400" autoplay loop muted disablePictureInPicture>
-			<source src="../img/MinesweeperDemo.mp4" type="video/mp4">
-			Your browser does not support this video :(
-		</video>
-	</div>
-  <div class="grid grid-cols-2 justify-items-center">
-    <video width="320" height="400" autoplay loop muted disablePictureInPicture>
-        <source src="../img/SnakeAIBeginner.mp4" type="video/mp4">
+    <br>
+    <div class="grid grid-cols-2 gap-5 justify-items-center">
+      <div class="descriptionText">
+        This is to experiment with fonts This is to experiment with fonts 
+        This is to experiment with fonts This is to experiment with fonts 
+        This is to experiment with fonts This is to experiment with fonts
+      </div>
+      <video width="320" height="400" autoplay loop muted disablePictureInPicture>
+        <source src="../img/MinesweeperDemo.mp4" type="video/mp4">
         Your browser does not support this video :(
-    </video>
-    <video width="320" height="400" autoplay loop muted disablePictureInPicture>
-        <source src="../img/SnakeAIExpert.mp4" type="video/mp4">
-        Your browser does not support this video :(
-    </video>
+      </video>
+    </div>
   </div>
-  <div class="grid grid-cols-2 justify-items-center">
-    <video width="420" height="500" autoplay loop muted disablePictureInPicture>
-        <source src="../img/3DAIBeginner.mp4" type="video/mp4">
-        Your browser does not support this video :(
-    </video>
-    <video width="420" height="500" autoplay loop muted disablePictureInPicture>
-        <source src="../img/3DAIExpert.mp4" type="video/mp4">
-        Your browser does not support this video :(
-    </video>
+  <div id="SnakeAI" class="mt-10 mb-80">
+    <div class="text-3xl text-center text-white">SnakeAI</div>
+    <br>
+    <div class="grid grid-cols-2 gap-5 justify-items-center mx-5 lg:gap-1">
+      <video autoplay loop muted disablePictureInPicture>
+          <source src="../img/SnakeAIBeginner.mp4" type="video/mp4">
+          Your browser does not support this video :(
+      </video>
+      <video autoplay loop muted disablePictureInPicture>
+          <source src="../img/SnakeAIExpert.mp4" type="video/mp4">
+          Your browser does not support this video :(
+      </video>
+    </div>
+    <br>
+    <div class="descriptionText mx-5">
+      This is to experiment with fonts This is to experiment with fonts 
+      This is to experiment with fonts This is to experiment with fonts 
+      This is to experiment with fonts This is to experiment with fonts
+    </div>
+  </div>
+  <div id="3DAI" class="mt-10 mb-80">
+    <div class="text-3xl text-center text-white">3D AI</div>
+    <br>
+    <div class="grid grid-cols-2 gap-5 justify-items-center mx-5">
+      <video autoplay loop muted disablePictureInPicture>
+          <source src="../img/3DAIBeginner.mp4" type="video/mp4">
+          Your browser does not support this video :(
+      </video>
+      <video autoplay loop muted disablePictureInPicture>
+          <source src="../img/3DAIExpert.mp4" type="video/mp4">
+          Your browser does not support this video :(
+      </video>
+    </div>
+    <br>
+    <div class="descriptionText mx-5">
+      This is to experiment with fonts This is to experiment with fonts 
+      This is to experiment with fonts This is to experiment with fonts 
+      This is to experiment with fonts This is to experiment with fonts
+    </div>
   </div>
   <br>
-	<div class="grid grid-cols-2 text-white text-center gap-5">
+	<div class="grid grid-cols-2 mx-5 text-white text-center gap-5">
 		<div class="text-3xl bg-slate-500 rounded-xl row">
-			Justin<br>
       <a href=mailto:"justinih2003@gmail.com" class="hover:text-black" target="_blank">
-        justinih2003@gmail.com <i class="material-icons">email</i>
+        Justin <i class="material-icons">email</i>
       </a>
       <br>
       <a href="Justin.html" class="hover:text-black rounded-xl">Click here</a>
 		</div>
 		<div class="text-3xl bg-slate-500 rounded-xl">
-      Nathaniel<br>
       <a href=mailto:"nathanieleh@gmail.com" class="hover:text-black" target="_blank">
-        nathanieleh@gmail.com <i class="material-icons">email</i>
+        Nathaniel <i class="material-icons">email</i>
       </a>
       <br>
       <a href="Nathaniel.html" class="hover:text-black rounded-xl">Click here</a>
 		</div>
 	</div>
 	<br>
-	<div class="grid grid-cols-2 justify-items-center">
+	<div class="grid grid-cols-2 gap-5 mx-5 mb-5 justify-items-center">
 		<image class="justify-self-center box-shading rounded-full" src="../img/SelfPortraitJustin.jpg">
 		<image class="justify-self-center box-shading rounded-full" src="../img/SelfPortraitNathaniel.jpg">
 	</div>
 </body>
-<footer>
-	<a href="index.html" class="text-white underline">Back To Top</a>
-</footer>
 </html>

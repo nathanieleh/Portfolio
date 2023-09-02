@@ -3,10 +3,22 @@
 @tailwind utilities;
 
 body {
-    /* background-color: rgb(42, 42, 42); */
     background-image: linear-gradient(rgb(23, 23, 23), rgb(46, 46, 46));
 }
 
 .box-shading {
     box-shadow: -8px 8px black;
+}
+
+.descriptionText {
+    font-size: larger;
+    color: whitesmoke;
+}
+
+#TopBar {
+    transition: all 0.2s ease-in-out;
+}
+
+#TopBar:hover {
+    font-size: 1.6rem;
 }
