@@ -21,15 +21,17 @@ window.smoothScroll = function(target) {
     scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
 }
 
-const fadeInElement = document.getElementById("Intro");
+const fadeInElement = document.querySelector("#Intro");
 
 const fader = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if(entry.isIntersecting){
-            fadeInElement.classList.add('opacity-0');
+            fadeInElement.classList.add('opacity-100');
+            fadeInElement.classList.add('translate-y-5');
         }
         else{
-            fadeInElement.classList.remove('opacity-0');
+            fadeInElement.classList.remove('opacity-100');
+            fadeInElement.classList.remove('translate-y-5');
         }
     });
 });
