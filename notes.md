@@ -24,6 +24,7 @@
 * 3DAI ran for 30 minutes before its showcase
 
 IMPORTANT
-* use intersect idea for each individual video to play videos automatically and hide the arrows
+* find a way to run a script automatically to check if the video navigation updates
+* fix the mobile back to top bar not working and side scrolling
 
 * npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch

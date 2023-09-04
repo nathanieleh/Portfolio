@@ -21,22 +21,33 @@ window.smoothScroll = function(target) {
     scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
 }
 
-const fadeInElement = document.querySelector("#Intro");
 
-const fader = new IntersectionObserver((entries) => {
+const intro = document.querySelector("#Intro");
+const minesweeperVideo = document.querySelector("#MinesweeperVideo");
+const snakeVideo1 = document.querySelector("#SnakeAIVideo1");
+const snakeVideo2 = document.querySelector("#SnakeAIVideo2");
+const threeDAIVideo1 = document.querySelector("#threeDimVid1");
+const threeDAIVideo2 = document.querySelector("#threeDimVid2");
+const leftArrow = document.querySelector("#leftArrow");
+const rightArrow = document.querySelector("#rightArrow");
+
+const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if(entry.isIntersecting){
-            fadeInElement.classList.add('opacity-100');
-            fadeInElement.classList.remove('-translate-y-5');
+            entry.target.classList.add('is-visible');
         }
         else{
-            fadeInElement.classList.remove('opacity-100');
-            fadeInElement.classList.add('-translate-y-5');
+            entry.target.classList.remove('is-visible');
         }
     });
 });
 
-fader.observe(fadeInElement);
+observer.observe(intro);
+observer.observe(minesweeperVideo);
+observer.observe(snakeVideo1);
+observer.observe(snakeVideo2);
+observer.observe(threeDAIVideo1);
+observer.observe(threeDAIVideo2);
 
 const panels = document.querySelectorAll("#Panel");
 const translateAmount = 100;
@@ -52,3 +63,46 @@ const slide = (direction) => {
         panels => (panels.style.transform = `translateX(${translate}%)`)
     );
 }
+    
+const hideArrows = () => {
+    if(minesweeperVideo.classList.contains('is-visible') && !snakeVideo1.classList.contains('is-visible')){
+        leftArrow.classList.add('hidden');
+        minesweeperVideo.play();
+        snakeVideo1.pause();
+        snakeVideo2.pause();
+    }
+    else {
+        leftArrow.classList.remove('hidden');
+        snakeVideo1.play();
+        snakeVideo2.play();
+        minesweeperVideo.pause();
+    }
+    if(threeDAIVideo1.classList.contains('is-visible') && threeDAIVideo2.classList.contains('is-visible')){
+        rightArrow.classList.add('hidden');
+        threeDAIVideo1.play();
+        threeDAIVideo2.play();
+        snakeVideo1.pause();
+        snakeVideo2.pause();
+    }
+    else{
+        rightArrow.classList.remove('hidden');
+        threeDAIVideo1.pause();
+        threeDAIVideo2.pause();
+    }
+}
+    
+const fadeIntro = () => {
+    if(intro.classList.contains('is-visible')){
+        intro.classList.add('opacity-100');
+        intro.classList.remove('-translate-y-5');
+    }
+    else {
+        intro.classList.remove('opacity-100');
+        intro.classList.add('-translate-y-5');
+    }
+}
+
+document.addEventListener('scroll', function() {
+    hideArrows();
+    fadeIntro();
+});
