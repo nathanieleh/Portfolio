@@ -22,4 +22,8 @@
 * Use recognizable icons such as gmail, github, linkedin
 * SnakeGameAI ran 200 games before its showcase and had a high score of 70
 * 3DAI ran for 30 minutes before its showcase
+
+IMPORTANT
+* use intersect idea for each individual video to play videos automatically and hide the arrows
+
 * npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch

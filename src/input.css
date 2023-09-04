@@ -3,7 +3,9 @@
 @tailwind utilities;
 
 body {
-    background-image: linear-gradient(rgb(23, 23, 23), rgb(46, 46, 46));
+    background-color: rgb(23, 23, 23);
+    position: relative;
+    overflow-x: hidden;
 }
 
 .box-shading {
@@ -11,8 +13,21 @@ body {
 }
 
 .descriptionText {
-    font-size: larger;
+    font-size: x-large;
     color: whitesmoke;
+    @media screen and (max-width: 1024px) {
+        overflow-y: scroll;
+        font-size: large;
+    }
+    @media screen and (max-width: 650px) {
+        overflow-y: scroll;
+        font-size: medium;
+    }
+    @media screen and (max-width: 500px) {
+        max-height: 250px;
+        overflow-y: scroll;
+        font-size: small;
+    }
 }
 
 #TopBar {
@@ -21,4 +36,24 @@ body {
 
 #TopBar:hover {
     font-size: 1.6rem;
+}
+
+#Panel {
+    height: 500px;
+    transition-timing-function: cubic-bezier(0.075, 0.785, 0.52, 1.475);
+}
+
+header {
+    background-image: url("../img/BetterBGImage.jpg") ;
+    background-color: rgb(23, 23, 23);
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: center;
+    background-blend-mode: lighten;
+    @media screen and (max-width: 1000px) {
+        background-size: 80%;
+    }
+    @media screen and (max-width: 650px) {
+        background-size: 100%;
+    }
 }

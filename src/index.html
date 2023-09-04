@@ -8,14 +8,14 @@
 </head>
 <body>
   <script src="script.js" defer></script>
-  <nav class="sticky top-0 text-left pl-5 pt-5 pb-5 bg-black z-50">
+  <nav class="sticky top-0 text-left pl-5 pt-5 pb-5 z-[99]" style="background-image: url('../img/TopBarModified.jpg');">
     <a id="TopBar" onclick="smoothScroll(document.body)" target="_self"
       class="text-white underline text-2xl">
       BACK TO TOP
     </a>
   </nav>
-	<header>
-    <div id="Intro" class="mt-16 mb-80 mx-5 opacity-0 transition-all duration-[2000ms] ease-in-out">
+	<header class="py-28 mt-16 mb-56">
+    <div id="Intro" class="opacity-0 transition-all -translate-y-5 duration-[2000ms] ease-in-out">
       <div class="text-3xl text-center text-white">
         Hi. Our names are <b>Justin</b> and <b>Nathaniel Hernandez</b> and<br>
         we are twins aspiring to become software developers.
@@ -30,61 +30,86 @@
   <br>
   <h1 class="text-3xl text-white text-center underline">Our Group Projects:</h1>
 	<br>
-  <div id="Minesweeper" class="mt-10 mb-80 mx-5">
-    <div class="text-3xl text-center text-white">
-      <a href="https://minesweeper-em9.pages.dev" class="hover:text-black" target="_blank">Minesweeper</a>
+  <div id="navigator" class="flex w-[300%] justify-items-center mb-10">
+    <button id="leftArrow"
+      class="absolute justify-center self-center left-[5%] bg-gray-500
+        text-white rounded-lg p-3 z-50
+        opacity-40 hover:opacity-90 transform duration-500"
+      onclick="slide('left')">
+      <
+    </button>
+    <button id="rightArrow"
+      class="absolute justify-center self-center right-[5%] bg-gray-500
+        text-white rounded-lg p-3 z-50
+        opacity-40 hover:opacity-90 transform duration-500"
+      onclick="slide('right')">
+      >
+    </button>
+    <div id="Panel" class="w-[100%] box-border self-center duration-500">
+      <div class="text-3xl text-center text-white">
+        <a href="https://minesweeper-em9.pages.dev" class="hover:text-black" target="_blank">
+          Minesweeper
+        </a>
+      </div>
+      <br>
+      <div class="grid grid-cols-2 gap-5 justify-items-center max-h-[100%]">
+        <div class="descriptionText ml-5 self-center max-h-[300px]">
+          It was a very exciting project for us due to the both of us enjoying Minesweeper 
+          very much. We were inspired to create a website that we ourselves would want to 
+          play on every day and we think we were somewhat successful at doing so. Overall, 
+          this was a great learning experience for the both of us due to how much knowledge 
+          we have gained about HTML, CSS, JS and React and we would love to share our 
+          experiences here in this document.
+        </div>
+        <video class="mr-5" width="360" autoplay loop muted disablePictureInPicture disableRemotePlayback>
+          <source src="../img/MinesweeperDemo.mp4" type="video/mp4">
+          Your browser does not support this video :(
+        </video>
+      </div>
     </div>
-    <br>
-    <div class="grid grid-cols-2 gap-5 justify-items-center">
-      <div class="descriptionText">
+    <div id="Panel" class="w-[100%] box-border self-center duration-500">
+      <div class="text-3xl text-center text-white">
+        SnakeAI
+      </div>
+      <br>
+      <div class="grid grid-cols-2 gap-5 justify-items-center mx-5 lg:gap-1">
+        <video width="580" loop muted disablePictureInPicture disableRemotePlayback>
+            <source src="../img/SnakeAIBeginner.mp4" type="video/mp4">
+            Your browser does not support this video :(
+        </video>
+        <video width="580" loop muted disablePictureInPicture disableRemotePlayback>
+            <source src="../img/SnakeAIExpert.mp4" type="video/mp4">
+            Your browser does not support this video :(
+        </video>
+      </div>
+      <br>
+      <div class="descriptionText mx-5">
         This is to experiment with fonts This is to experiment with fonts 
         This is to experiment with fonts This is to experiment with fonts 
         This is to experiment with fonts This is to experiment with fonts
       </div>
-      <video width="320" height="400" autoplay loop muted disablePictureInPicture>
-        <source src="../img/MinesweeperDemo.mp4" type="video/mp4">
-        Your browser does not support this video :(
-      </video>
     </div>
-  </div>
-  <div id="SnakeAI" class="mt-10 mb-80">
-    <div class="text-3xl text-center text-white">SnakeAI</div>
-    <br>
-    <div class="grid grid-cols-2 gap-5 justify-items-center mx-5 lg:gap-1">
-      <video autoplay loop muted disablePictureInPicture>
-          <source src="../img/SnakeAIBeginner.mp4" type="video/mp4">
-          Your browser does not support this video :(
-      </video>
-      <video autoplay loop muted disablePictureInPicture>
-          <source src="../img/SnakeAIExpert.mp4" type="video/mp4">
-          Your browser does not support this video :(
-      </video>
-    </div>
-    <br>
-    <div class="descriptionText mx-5">
-      This is to experiment with fonts This is to experiment with fonts 
-      This is to experiment with fonts This is to experiment with fonts 
-      This is to experiment with fonts This is to experiment with fonts
-    </div>
-  </div>
-  <div id="3DAI" class="mt-10 mb-80">
-    <div class="text-3xl text-center text-white">3D AI</div>
-    <br>
-    <div class="grid grid-cols-2 gap-5 justify-items-center mx-5">
-      <video autoplay loop muted disablePictureInPicture>
-          <source src="../img/3DAIBeginner.mp4" type="video/mp4">
-          Your browser does not support this video :(
-      </video>
-      <video autoplay loop muted disablePictureInPicture>
-          <source src="../img/3DAIExpert.mp4" type="video/mp4">
-          Your browser does not support this video :(
-      </video>
-    </div>
-    <br>
-    <div class="descriptionText mx-5">
-      This is to experiment with fonts This is to experiment with fonts 
-      This is to experiment with fonts This is to experiment with fonts 
-      This is to experiment with fonts This is to experiment with fonts
+    <div id="Panel" class="w-[100%] box-border self-center duration-500">
+      <div class="text-3xl text-center text-white">
+        3D AI
+      </div>
+      <br>
+      <div class="grid grid-cols-2 gap-5 justify-items-center mx-5">
+        <video loop muted disablePictureInPicture disableRemotePlayback>
+            <source src="../img/3DAIBeginner.mp4" type="video/mp4">
+            Your browser does not support this video :(
+        </video>
+        <video loop muted disablePictureInPicture disableRemotePlayback>
+            <source src="../img/3DAIExpert.mp4" type="video/mp4">
+            Your browser does not support this video :(
+        </video>
+      </div>
+      <br>
+      <div class="descriptionText mx-5">
+        This is to experiment with fonts This is to experiment with fonts 
+        This is to experiment with fonts This is to experiment with fonts 
+        This is to experiment with fonts This is to experiment with fonts
+      </div>
     </div>
   </div>
   <br>
@@ -94,14 +119,18 @@
         Justin <i class="material-icons">email</i>
       </a>
       <br>
-      <a href="Justin.html" class="hover:text-black rounded-xl">Click here</a>
+      <a href="Justin.html" class="hover:text-black rounded-xl">
+        Click here
+      </a>
 		</div>
 		<div class="text-3xl bg-slate-500 rounded-xl">
       <a href=mailto:"nathanieleh@gmail.com" class="hover:text-black" target="_blank">
         Nathaniel <i class="material-icons">email</i>
       </a>
       <br>
-      <a href="Nathaniel.html" class="hover:text-black rounded-xl">Click here</a>
+      <a href="Nathaniel.html" class="hover:text-black rounded-xl">
+        Click here
+      </a>
 		</div>
 	</div>
 	<br>

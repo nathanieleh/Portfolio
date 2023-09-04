@@ -27,13 +27,28 @@ const fader = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if(entry.isIntersecting){
             fadeInElement.classList.add('opacity-100');
-            fadeInElement.classList.add('translate-y-5');
+            fadeInElement.classList.remove('-translate-y-5');
         }
         else{
             fadeInElement.classList.remove('opacity-100');
-            fadeInElement.classList.remove('translate-y-5');
+            fadeInElement.classList.add('-translate-y-5');
         }
     });
 });
 
 fader.observe(fadeInElement);
+
+const panels = document.querySelectorAll("#Panel");
+const translateAmount = 100;
+let translate = 0;
+const slide = (direction) => {
+    if(direction === "left"){
+        translate += translateAmount;
+    }
+    else {
+        translate -= translateAmount;
+    }
+    panels.forEach(
+        panels => (panels.style.transform = `translateX(${translate}%)`)
+    );
+}
