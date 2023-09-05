@@ -613,8 +613,8 @@ video {
   margin-bottom: 1.25rem;
 }
 
-.mb-52 {
-  margin-bottom: 13rem;
+.mb-56 {
+  margin-bottom: 14rem;
 }
 
 .ml-5 {
@@ -633,20 +633,8 @@ video {
   margin-top: 1.25rem;
 }
 
-.mb-56 {
-  margin-bottom: 14rem;
-}
-
-.mt-10 {
-  margin-top: 2.5rem;
-}
-
 .box-border {
   box-sizing: border-box;
-}
-
-.flex {
-  display: flex;
 }
 
 .grid {
@@ -667,10 +655,6 @@ video {
 
 .w-\[100\%\] {
   width: 100%;
-}
-
-.w-\[300\%\] {
-  width: 300%;
 }
 
 .-translate-y-5 {
@@ -739,6 +723,11 @@ video {
 
 .p-3 {
   padding: 0.75rem;
+}
+
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 
 .py-28 {
@@ -836,7 +825,6 @@ video {
 body {
   background-color: rgb(23, 23, 23);
   position: relative;
-  overflow-x: hidden;
 }
 
 .box-shading {
@@ -846,23 +834,33 @@ body {
 .descriptionText {
   font-size: x-large;
   color: whitesmoke;
+  background-color: rgb(76, 76, 76);
+  border-radius: 2rem;
+  padding: 1rem;
+  overflow-y: scroll;
   @media screen and (max-width: 1024px) {
-    overflow-y: scroll;
-
     font-size: large;
   }
   @media screen and (max-width: 650px) {
-    overflow-y: scroll;
-
     font-size: medium;
   }
   @media screen and (max-width: 500px) {
     max-height: 250px;
 
-    overflow-y: scroll;
-
-    font-size: small;
+    font-size: x-small;
   }
+}
+
+::-webkit-scrollbar {
+  margin-block: 3rem;
+  background-color: rgb(140, 140, 140);
+  width: .3rem;
+  border-radius: 5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: black;
+  border-radius: 5rem;
 }
 
 #TopBar {
@@ -873,9 +871,20 @@ body {
   font-size: 1.6rem;
 }
 
+#navigator {
+  display: grid;
+  margin-inline: 1.5rem;
+  padding-bottom: 5rem;
+  grid-auto-flow: column;
+  grid-auto-columns: 100%;
+  overflow: hidden;
+  overscroll-behavior-inline: contain;
+}
+
 #Panel {
   height: 500px;
-  transition-timing-function: cubic-bezier(0.075, 0.785, 0.52, 1.475);
+  transition-duration: 1.5s;
+  transition-timing-function: cubic-bezier(0.68, -0.25, 0.265, 1.15);
 }
 
 header {

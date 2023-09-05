@@ -22,24 +22,47 @@ window.smoothScroll = function(target) {
 }
 
 
-const intro = document.querySelector("#Intro");
-const minesweeperVideo = document.querySelector("#MinesweeperVideo");
-const snakeVideo1 = document.querySelector("#SnakeAIVideo1");
-const snakeVideo2 = document.querySelector("#SnakeAIVideo2");
-const threeDAIVideo1 = document.querySelector("#threeDimVid1");
-const threeDAIVideo2 = document.querySelector("#threeDimVid2");
-const leftArrow = document.querySelector("#leftArrow");
-const rightArrow = document.querySelector("#rightArrow");
+const intro = document.getElementById("Intro");
+const minesweeperVideo = document.getElementById("MinesweeperVideo");
+const snakeVideo1 = document.getElementById("SnakeAIVideo1");
+const snakeVideo2 = document.getElementById("SnakeAIVideo2");
+const threeDAIVideo1 = document.getElementById("threeDimVid1");
+const threeDAIVideo2 = document.getElementById("threeDimVid2");
+const leftArrow = document.getElementById("leftArrow");
+const rightArrow = document.getElementById("rightArrow");
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if(entry.isIntersecting){
             entry.target.classList.add('is-visible');
+            if(entry.target.innerHTML.includes("Snake AI")){
+                snakeVideo1.setAttribute("src", "../img/SnakeAIBeginner.mp4");
+                snakeVideo2.setAttribute("src", "../img/SnakeAIExpert.mp4");
+                minesweeperVideo.removeAttribute("src");
+                threeDAIVideo1.removeAttribute("src");
+                threeDAIVideo2.removeAttribute("src");
+            }
+            else if(entry.target.innerHTML.includes("3D AI")){
+                threeDAIVideo1.setAttribute("src", "../img/3DAIBeginner.mp4");
+                threeDAIVideo2.setAttribute("src", "../img/3DAIExpert.mp4");
+                minesweeperVideo.removeAttribute("src");
+                snakeVideo1.removeAttribute("src");
+                snakeVideo2.removeAttribute("src");
+            }
+            else{
+                minesweeperVideo.setAttribute("src", "../img/MinesweeperDemo.mp4");
+                snakeVideo1.removeAttribute("src");
+                snakeVideo2.removeAttribute("src");
+                threeDAIVideo1.removeAttribute("src");
+                threeDAIVideo2.removeAttribute("src");
+                leftArrow.classList.add('hidden');
+            }
         }
-        else{
+        else
             entry.target.classList.remove('is-visible');
-        }
+        
     });
+    fadeIntro();
 });
 
 observer.observe(intro);
@@ -53,12 +76,17 @@ const panels = document.querySelectorAll("#Panel");
 const translateAmount = 100;
 let translate = 0;
 const slide = (direction) => {
-    if(direction === "left"){
+    if(direction === "left")
         translate += translateAmount;
-    }
-    else {
+    else 
         translate -= translateAmount;
-    }
+    
+    leftArrow.classList.add("hidden");
+    rightArrow.classList.add("hidden");
+    setTimeout(() => {
+        hideArrows();
+    }, 1500);
+
     panels.forEach(
         panels => (panels.style.transform = `translateX(${translate}%)`)
     );
@@ -67,27 +95,15 @@ const slide = (direction) => {
 const hideArrows = () => {
     if(minesweeperVideo.classList.contains('is-visible') && !snakeVideo1.classList.contains('is-visible')){
         leftArrow.classList.add('hidden');
-        minesweeperVideo.play();
-        snakeVideo1.pause();
-        snakeVideo2.pause();
     }
     else {
         leftArrow.classList.remove('hidden');
-        snakeVideo1.play();
-        snakeVideo2.play();
-        minesweeperVideo.pause();
     }
     if(threeDAIVideo1.classList.contains('is-visible') && threeDAIVideo2.classList.contains('is-visible')){
         rightArrow.classList.add('hidden');
-        threeDAIVideo1.play();
-        threeDAIVideo2.play();
-        snakeVideo1.pause();
-        snakeVideo2.pause();
     }
-    else{
+    else {
         rightArrow.classList.remove('hidden');
-        threeDAIVideo1.pause();
-        threeDAIVideo2.pause();
     }
 }
     
@@ -101,8 +117,3 @@ const fadeIntro = () => {
         intro.classList.add('-translate-y-5');
     }
 }
-
-document.addEventListener('scroll', function() {
-    hideArrows();
-    fadeIntro();
-});

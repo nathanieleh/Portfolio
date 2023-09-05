@@ -5,7 +5,6 @@
 body {
     background-color: rgb(23, 23, 23);
     position: relative;
-    overflow-x: hidden;
 }
 
 .box-shading {
@@ -15,19 +14,32 @@ body {
 .descriptionText {
     font-size: x-large;
     color: whitesmoke;
+    background-color: rgb(76, 76, 76);
+    border-radius: 2rem;
+    padding: 1rem;
+    overflow-y: scroll;
     @media screen and (max-width: 1024px) {
-        overflow-y: scroll;
         font-size: large;
     }
     @media screen and (max-width: 650px) {
-        overflow-y: scroll;
         font-size: medium;
     }
     @media screen and (max-width: 500px) {
         max-height: 250px;
-        overflow-y: scroll;
-        font-size: small;
+        font-size: x-small;
     }
+}
+
+::-webkit-scrollbar {
+    margin-block: 3rem;
+    background-color: rgb(140, 140, 140);
+    width: .3rem;
+    border-radius: 5rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: black;
+    border-radius: 5rem;
 }
 
 #TopBar {
@@ -38,9 +50,20 @@ body {
     font-size: 1.6rem;
 }
 
+#navigator {
+    display: grid;
+    margin-inline: 1.5rem;
+    padding-bottom: 5rem;
+    grid-auto-flow: column;
+    grid-auto-columns: 100%;
+    overflow: hidden;
+    overscroll-behavior-inline: contain;
+}
+
 #Panel {
     height: 500px;
-    transition-timing-function: cubic-bezier(0.075, 0.785, 0.52, 1.475);
+    transition-duration: 1.5s;
+    transition-timing-function: cubic-bezier(0.68, -0.25, 0.265, 1.15);
 }
 
 header {
