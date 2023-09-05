@@ -53,6 +53,7 @@ const observer = new IntersectionObserver((entries) => {
                 snakeVideo1.removeAttribute("src");
                 snakeVideo2.removeAttribute("src");
                 setTimeout(() => {
+                    minesweeperVideo.load();
                     snakeVideo1.load();
                     snakeVideo2.load();
                 }, 1000);
@@ -62,6 +63,8 @@ const observer = new IntersectionObserver((entries) => {
                 snakeVideo1.removeAttribute("src");
                 snakeVideo2.removeAttribute("src");
                 setTimeout(() => {
+                    threeDAIVideo1.load();
+                    threeDAIVideo2.load();
                     snakeVideo1.load();
                     snakeVideo2.load();
                 }, 1000);
