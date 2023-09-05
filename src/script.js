@@ -38,40 +38,25 @@ const observer = new IntersectionObserver((entries) => {
             if(entry.target.innerHTML.includes("Snake AI")){
                 snakeVideo1.setAttribute("src", "../img/SnakeAIBeginner.mp4");
                 snakeVideo2.setAttribute("src", "../img/SnakeAIExpert.mp4");
-                minesweeperVideo.removeAttribute("src");
-                threeDAIVideo1.removeAttribute("src");
-                threeDAIVideo2.removeAttribute("src");
                 setTimeout(() => {
-                    minesweeperVideo.load();
-                    snakeVideo1.load();
-                    snakeVideo2.load();
-                    threeDAIVideo1.load();
-                    threeDAIVideo2.load();
+                    minesweeperVideo.setAttribute("src", "");
+                    threeDAIVideo1.setAttribute("src", "");
+                    threeDAIVideo2.setAttribute("src", "");
                 }, 1000);
             }
             else if(entry.target.innerHTML.includes("3D AI")){
                 threeDAIVideo1.setAttribute("src", "../img/3DAIBeginner.mp4");
                 threeDAIVideo2.setAttribute("src", "../img/3DAIExpert.mp4");
-                snakeVideo1.removeAttribute("src");
-                snakeVideo2.removeAttribute("src");
                 setTimeout(() => {
-                    minesweeperVideo.load();
-                    snakeVideo1.load();
-                    snakeVideo2.load();
-                    threeDAIVideo1.load();
-                    threeDAIVideo2.load();
+                    snakeVideo1.setAttribute("src", "");
+                    snakeVideo2.setAttribute("src", "");
                 }, 1000);
             }
             else if(entry.target.innerHTML.includes("Minesweeper")){
                 minesweeperVideo.setAttribute("src", "../img/MinesweeperDemo.mp4");
-                snakeVideo1.removeAttribute("src");
-                snakeVideo2.removeAttribute("src");
                 setTimeout(() => {
-                    minesweeperVideo.load();
-                    snakeVideo1.load();
-                    snakeVideo2.load();
-                    threeDAIVideo1.load();
-                    threeDAIVideo2.load();
+                    snakeVideo1.setAttribute("src", "");
+                    snakeVideo2.setAttribute("src", "");
                 }, 1000);
                 leftArrow.classList.add('hidden');
             }
