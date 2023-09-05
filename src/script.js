@@ -43,6 +43,8 @@ const observer = new IntersectionObserver((entries) => {
                 threeDAIVideo2.removeAttribute("src");
                 setTimeout(() => {
                     minesweeperVideo.load();
+                    snakeVideo1.load();
+                    snakeVideo2.load();
                     threeDAIVideo1.load();
                     threeDAIVideo2.load();
                 }, 1000);
@@ -56,6 +58,8 @@ const observer = new IntersectionObserver((entries) => {
                     minesweeperVideo.load();
                     snakeVideo1.load();
                     snakeVideo2.load();
+                    threeDAIVideo1.load();
+                    threeDAIVideo2.load();
                 }, 1000);
             }
             else if(entry.target.innerHTML.includes("Minesweeper")){
@@ -63,10 +67,11 @@ const observer = new IntersectionObserver((entries) => {
                 snakeVideo1.removeAttribute("src");
                 snakeVideo2.removeAttribute("src");
                 setTimeout(() => {
-                    threeDAIVideo1.load();
-                    threeDAIVideo2.load();
+                    minesweeperVideo.load();
                     snakeVideo1.load();
                     snakeVideo2.load();
+                    threeDAIVideo1.load();
+                    threeDAIVideo2.load();
                 }, 1000);
                 leftArrow.classList.add('hidden');
             }
