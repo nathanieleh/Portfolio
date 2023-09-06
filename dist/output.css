@@ -580,24 +580,8 @@ video {
   position: sticky;
 }
 
-.left-\[5\%\] {
-  left: 5%;
-}
-
-.right-\[5\%\] {
-  right: 5%;
-}
-
 .top-0 {
   top: 0px;
-}
-
-.z-50 {
-  z-index: 50;
-}
-
-.z-\[99\] {
-  z-index: 99;
 }
 
 .mx-5 {
@@ -605,8 +589,8 @@ video {
   margin-right: 1.25rem;
 }
 
-.mb-10 {
-  margin-bottom: 2.5rem;
+.mb-16 {
+  margin-bottom: 4rem;
 }
 
 .mb-5 {
@@ -637,6 +621,10 @@ video {
   box-sizing: border-box;
 }
 
+.block {
+  display: block;
+}
+
 .grid {
   display: grid;
 }
@@ -647,6 +635,10 @@ video {
 
 .max-h-\[100\%\] {
   max-height: 100%;
+}
+
+.max-h-\[30\%\] {
+  max-height: 30%;
 }
 
 .max-h-\[300px\] {
@@ -674,10 +666,6 @@ video {
   grid-template-rows: repeat(2, minmax(0, 1fr));
 }
 
-.justify-center {
-  justify-content: center;
-}
-
 .justify-items-center {
   justify-items: center;
 }
@@ -698,10 +686,6 @@ video {
   border-radius: 9999px;
 }
 
-.rounded-lg {
-  border-radius: 0.5rem;
-}
-
 .rounded-xl {
   border-radius: 0.75rem;
 }
@@ -711,23 +695,14 @@ video {
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
-.bg-gray-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(107 114 128 / var(--tw-bg-opacity));
-}
-
-.bg-slate-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(100 116 139 / var(--tw-bg-opacity));
-}
-
-.p-3 {
-  padding: 0.75rem;
-}
-
 .px-5 {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
+}
+
+.py-16 {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
 .py-28 {
@@ -775,6 +750,11 @@ video {
   line-height: 1.75rem;
 }
 
+.text-\[\#eff6e0\] {
+  --tw-text-opacity: 1;
+  color: rgb(239 246 224 / var(--tw-text-opacity));
+}
+
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -790,10 +770,6 @@ video {
 
 .opacity-100 {
   opacity: 1;
-}
-
-.opacity-40 {
-  opacity: 0.4;
 }
 
 .transition {
@@ -823,18 +799,31 @@ video {
 }
 
 body {
-  background-color: rgb(23, 23, 23);
+  background-color: #01161e;
   position: relative;
 }
 
 .box-shading {
-  box-shadow: -8px 8px black;
+  box-shadow: -8px 8px teal;
+}
+
+.nav-bar {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-auto-flow: column;
+  position: sticky;
+  top: 0px;
+  padding-block: 1.25rem;
+  z-index: 99;
+  justify-items: center;
+  background-image: url('../img/TopBarModified.jpg');
 }
 
 .descriptionText {
   font-size: x-large;
   color: whitesmoke;
   background-color: rgb(76, 76, 76);
+  box-shadow: -5px 5px teal;
   border-radius: 2rem;
   padding: 1rem;
   overflow-y: scroll;
@@ -851,6 +840,77 @@ body {
   }
 }
 
+.projectButton {
+  display: block;
+  margin: 0 auto;
+  padding: 0 0.5rem 0 0.5rem;
+  text-align: center;
+  background-color: rgb(59,83,92);
+  border-radius: 100vw;
+  transition: 0.5s ease-in-out;
+  box-shadow: -5px 5px /*rgb(12,45,59)*/ #aec3b0;
+}
+
+.projectButton:hover {
+  transform: scale(1.05, 1.05);
+  background-color: rgb(34, 47, 51);
+}
+
+.arrow-button {
+  position: absolute;
+  justify-content: center;
+  align-self: center;
+  background-color: rgb(126, 126, 126);
+  color: rgb(255 255 255 / 1);
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  z-index: 50;
+  opacity: 60%;
+  transform: scale(1.5, 2);
+  transition-duration: 500ms;
+}
+
+.arrow-button:hover {
+  opacity: 90%;
+}
+
+.right {
+  right: 5%;
+  animation: right-and-back 1s ease-in-out infinite alternate;
+}
+
+.left {
+  left: 5%;
+  animation: left-and-back 1s ease-in-out infinite alternate;
+}
+
+@keyframes left-and-back {
+  0% {
+    left: 5%;
+  }
+
+  100% {
+    left: 6%;
+  }
+}
+
+@keyframes right-and-back {
+  0% {
+    right: 5%;
+  }
+
+  100% {
+    right: 6%;
+  }
+}
+
+.social-box {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  border-radius: 0.75rem;
+  background-color: rgb(59,83,92);
+}
+
 ::-webkit-scrollbar {
   margin-block: 3rem;
   background-color: rgb(140, 140, 140);
@@ -865,10 +925,22 @@ body {
 
 #TopBar {
   transition: all 0.2s ease-in-out;
+  @media screen and (max-width: 450px) {
+    font-size: 1.25rem;
+  }
+  @media screen and (max-width: 380px) {
+    font-size: 0.95rem;
+  }
 }
 
 #TopBar:hover {
-  font-size: 1.6rem;
+  font-size: 2rem;
+  @media screen and (max-width: 450px) {
+    font-size: 1.35rem;
+  }
+  @media screen and (max-width: 380px) {
+    font-size: 1.1rem;
+  }
 }
 
 #navigator {
@@ -905,10 +977,6 @@ header {
 .hover\:text-black:hover {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
-}
-
-.hover\:opacity-90:hover {
-  opacity: 0.9;
 }
 
 @media (min-width: 1024px) {

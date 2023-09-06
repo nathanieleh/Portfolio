@@ -3,18 +3,31 @@
 @tailwind utilities;
 
 body {
-    background-color: rgb(23, 23, 23);
+    background-color: #01161e;
     position: relative;
 }
 
 .box-shading {
-    box-shadow: -8px 8px black;
+    box-shadow: -8px 8px teal;
+}
+
+.nav-bar {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-auto-flow: column;
+    position: sticky;
+    top: 0px;
+    padding-block: 1.25rem;
+    z-index: 99;
+    justify-items: center;
+    background-image: url('../img/TopBarModified.jpg');
 }
 
 .descriptionText {
     font-size: x-large;
     color: whitesmoke;
     background-color: rgb(76, 76, 76);
+    box-shadow: -5px 5px teal;
     border-radius: 2rem;
     padding: 1rem;
     overflow-y: scroll;
@@ -28,6 +41,74 @@ body {
         max-height: 250px;
         font-size: x-small;
     }
+}
+
+.projectButton {
+    display: block;
+    margin: 0 auto;
+    padding: 0 0.5rem 0 0.5rem;
+    text-align: center;
+    background-color: rgb(59,83,92);
+    border-radius: 100vw;
+    transition: 0.5s ease-in-out;
+    box-shadow: -5px 5px /*rgb(12,45,59)*/ #aec3b0;
+}
+
+.projectButton:hover {
+    transform: scale(1.05, 1.05);
+    background-color: rgb(34, 47, 51);
+}
+
+.arrow-button {
+    position: absolute;
+    justify-content: center;
+    align-self: center;
+    background-color: rgb(126, 126, 126);
+    color: rgb(255 255 255 / 1);
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    z-index: 50;
+    opacity: 60%;
+    transform: scale(1.5, 2);
+    transition-duration: 500ms;
+}
+
+.arrow-button:hover {
+    opacity: 90%;
+}
+
+.right {
+    right: 5%;
+    animation: right-and-back 1s ease-in-out infinite alternate;
+}
+.left {
+    left: 5%;
+    animation: left-and-back 1s ease-in-out infinite alternate;
+}
+
+@keyframes left-and-back {
+    0% {
+        left: 5%;
+    }
+    100% {
+        left: 6%;
+    }
+}
+
+@keyframes right-and-back {
+    0% {
+        right: 5%;
+    }
+    100% {
+        right: 6%;
+    }
+}
+
+.social-box {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    border-radius: 0.75rem;
+    background-color: rgb(59,83,92);
 }
 
 ::-webkit-scrollbar {
@@ -44,10 +125,22 @@ body {
 
 #TopBar {
     transition: all 0.2s ease-in-out;
+    @media screen and (max-width: 450px) {
+        font-size: 1.25rem;
+    }
+    @media screen and (max-width: 380px) {
+        font-size: 0.95rem;
+    }
 }
 
 #TopBar:hover {
-    font-size: 1.6rem;
+    font-size: 2rem;
+    @media screen and (max-width: 450px) {
+        font-size: 1.35rem;
+    }
+    @media screen and (max-width: 380px) {
+        font-size: 1.1rem;
+    }
 }
 
 #navigator {
