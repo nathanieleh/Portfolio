@@ -21,6 +21,43 @@
       SOCIALS
     </a>
   </nav>
+  <div id="Socials" class="grid grid-cols-2 mx-5 mt-5 text-[#eff6e0] text-center gap-5">
+    <div class="social-box box-shading">
+      <a href="Justin.html" class="hover:text-black rounded-xl">
+        Justin's Projects
+      </a>
+      <br>
+      <a href=mailto:"justinih2003@gmail.com" class="hover:text-black" target="_blank">
+        <i class="material-icons">email</i>
+      </a>
+      <a href="https://www.linkedin.com/in/justin-hernandez-aa485b270/" class="hover:text-black" target="_blank">
+        <i class="fa-brands fa-linkedin"></i>
+      </a>
+      <a href="https://github.com/Sh0ckWave473" class="hover:text-black" target="_blank">
+        <i class="fa-brands fa-github"></i>
+      </a>
+    </div>
+    <div class="social-box box-shading">
+      <a href="Nathaniel.html" class="hover:text-black rounded-xl">
+        Nathaniel's Projects
+      </a>
+      <br>
+      <a href=mailto:"nathanieleh@gmail.com" class="hover:text-black" target="_blank">
+        <i class="material-icons">email</i>
+      </a>
+      <a href="https://www.linkedin.com/in/nathaniel-hernandez-46915026b/" class="hover:text-black" target="_blank">
+        <i class="fa-brands fa-linkedin"></i>
+      </a>
+      <a href="https://github.com/nathanieleh" class="hover:text-black" target="_blank">
+        <i class="fa-brands fa-github"></i>
+      </a>
+    </div>
+  </div>
+  <br>
+  <div class="grid grid-cols-2 gap-5 mx-5 mb-5 justify-items-center">
+    <image class="justify-self-center box-shading rounded-full" src="../img/SelfPortraitJustin.jpg">
+    <image class="justify-self-center box-shading rounded-full" src="../img/SelfPortraitNathaniel.jpg">
+  </div>
   <header class="py-28 mt-16 mb-56">
     <div id="Intro" class="opacity-0 transition-all -translate-y-5 duration-[2000ms] ease-in-out">
       <div class="text-3xl text-center text-white">
@@ -40,11 +77,11 @@
   </h1>
   <div id="navigator" class="mb-16">
     <button id="leftArrow" class="arrow-button left"
-      onclick="slide('left')">
+      onclick="slide('left'); smoothScroll(document.getElementById('GroupProjects'));">
       <i class="fa-solid fa-arrow-left"></i>
     </button>
     <button id="rightArrow" class="arrow-button right"
-      onclick="slide('right')">
+      onclick="slide('right'); smoothScroll(document.getElementById('GroupProjects'));">
       <i class="fa-solid fa-arrow-right"></i>
     </button>
     <div id="Panel" class="w-[100%] box-border self-center duration-500 px-5">
@@ -121,32 +158,6 @@
         This was developed using C# as the main programming language.
       </div>
     </div>
-  </div>
-  <br>
-  <div id="Socials" class="grid grid-cols-2 mx-5 text-[#eff6e0] text-center gap-5">
-    <div class="social-box box-shading">
-      <a href=mailto:"justinih2003@gmail.com" class="hover:text-black" target="_blank">
-        Justin <i class="material-icons">email</i>
-      </a>
-      <br>
-      <a href="Justin.html" class="hover:text-black rounded-xl">
-        Click here
-      </a>
-    </div>
-    <div class="social-box box-shading">
-      <a href=mailto:"nathanieleh@gmail.com" class="hover:text-black" target="_blank">
-        Nathaniel <i class="material-icons">email</i>
-      </a>
-      <br>
-      <a href="Nathaniel.html" class="hover:text-black rounded-xl">
-        Click here
-      </a>
-    </div>
-  </div>
-  <br>
-  <div class="grid grid-cols-2 gap-5 mx-5 mb-5 justify-items-center">
-    <image class="justify-self-center box-shading rounded-full" src="../img/SelfPortraitJustin.jpg">
-    <image class="justify-self-center box-shading rounded-full" src="../img/SelfPortraitNathaniel.jpg">
   </div>
   <a href="https://coolors.co/264653-2a9d8f-e9c46a-f4a261-e76f51" class="text-white"> Color 1<br>
   <a href="https://coolors.co/01161e-124559-598392-aec3b0-eff6e0" class="text-white"> Color 2<br>
