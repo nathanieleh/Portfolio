@@ -6,69 +6,76 @@
   <link href="../dist/output.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <script src="https://kit.fontawesome.com/04dadf6c21.js" crossorigin="anonymous"></script>
-</head>
-<body>
   <script src="script.js" defer></script>
+</head>
+<body id="Body">
   <nav class="nav-bar">
-    <a id="TopBar" onclick="smoothScroll(document.body)" target="_self"
+    <a id="TopBar" href="#Body" target="_self"
       class="text-white underline text-3xl">
       BACK TO TOP
     </a>
-    <a id="TopBar" onclick="smoothScroll(document.getElementById('GroupProjects'))" class="text-white underline text-3xl">
+    <a id="TopBar" href="#GroupProjects" class="text-white underline text-3xl">
       PROJECTS
     </a>
-    <a id="TopBar" onclick="smoothScroll(document.getElementById('Socials'))" class="text-white underline text-3xl">
-      SOCIALS
-    </a>
   </nav>
-  <div id="Socials" class="grid grid-cols-2 mx-5 mt-5 text-[#eff6e0] text-center gap-5">
-    <div class="social-box box-shading">
-      <a href="Justin.html" class="hover:text-black rounded-xl">
-        Justin's Projects
-      </a>
-      <br>
-      <a href=mailto:"justinih2003@gmail.com" class="hover:text-black" target="_blank">
-        <i class="material-icons">email</i>
-      </a>
-      <a href="https://www.linkedin.com/in/justin-hernandez-aa485b270/" class="hover:text-black" target="_blank">
-        <i class="fa-brands fa-linkedin"></i>
-      </a>
-      <a href="https://github.com/Sh0ckWave473" class="hover:text-black" target="_blank">
-        <i class="fa-brands fa-github"></i>
-      </a>
+  <header class="h-[100vh]">
+    <div id="Socials">
+      <div id="names-grid" class="grid grid-cols-3 text-center">
+        <div id="names">
+          <image class="justify-self-center box-shading rounded-full inline-block" width="20%" src="../img/SelfPortraitJustin.jpg">
+          Justin
+        </div>
+        <div id="names">
+          &
+        </div>
+        <div id="names">
+          Nathaniel 
+          <image class="justify-self-center box-shading rounded-full inline-block" width="20%" src="../img/SelfPortraitNathaniel.jpg">
+        </div>
+      </div>
+      <div class="grid grid-cols-2 text-center">
+        <div id="names-subtitle">
+          <a href=mailto:"justinih2003@gmail.com" class="hover:text-black" target="_blank">
+            <i class="fa-regular fa-envelope"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/justin-hernandez-aa485b270/" class="hover:text-black" target="_blank">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/Sh0ckWave473" class="hover:text-black" target="_blank">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="Justin.html" class="hover:text-black pl-2">
+            Justin's Projects
+          </a>
+        </div>
+        <div id="names-subtitle">
+          <a href="Nathaniel.html" class="hover:text-black pr-2">
+            Nathaniel's Projects
+          </a>
+          <a href=mailto:"nathanieleh@gmail.com" class="hover:text-black" target="_blank">
+            <i class="fa-regular fa-envelope"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/nathaniel-hernandez-46915026b/" class="hover:text-black" target="_blank">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/nathanieleh" class="hover:text-black" target="_blank">
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </div>
+      </div>
     </div>
-    <div class="social-box box-shading">
-      <a href="Nathaniel.html" class="hover:text-black rounded-xl">
-        Nathaniel's Projects
-      </a>
-      <br>
-      <a href=mailto:"nathanieleh@gmail.com" class="hover:text-black" target="_blank">
-        <i class="material-icons">email</i>
-      </a>
-      <a href="https://www.linkedin.com/in/nathaniel-hernandez-46915026b/" class="hover:text-black" target="_blank">
-        <i class="fa-brands fa-linkedin"></i>
-      </a>
-      <a href="https://github.com/nathanieleh" class="hover:text-black" target="_blank">
-        <i class="fa-brands fa-github"></i>
-      </a>
-    </div>
-  </div>
-  <br>
-  <div class="grid grid-cols-2 gap-5 mx-5 mb-5 justify-items-center">
-    <image class="justify-self-center box-shading rounded-full" src="../img/SelfPortraitJustin.jpg">
-    <image class="justify-self-center box-shading rounded-full" src="../img/SelfPortraitNathaniel.jpg">
-  </div>
-  <header class="py-28 mt-16 mb-56">
-    <div id="Intro" class="opacity-0 transition-all -translate-y-5 duration-[2000ms] ease-in-out">
-      <div class="text-3xl text-center text-white">
-        Hi. Our names are <b>Justin</b> and <b>Nathaniel Hernandez</b> and<br>
-        we are twins aspiring to become software developers.
+    <div id="Intro" class="pt-16 -pb-16 opacity-0 transition-all -translate-y-5 duration-[2000ms] ease-in-out">
+      <div id="intro-header" class="px-3 text-center text-white">
+        Welcome! We are twins aspiring to become software developers.
       </div>
       <br>
-      <div class="text-xl text-center text-white">
+      <div id="intro-subtext" class="px-3 text-center text-white">
         Both of us are studying at the University of California San Diego and<br>
         are currently working towards a B.S. in Mathematics-Computer Science...
       </div>
+    </div>
+    <div id="down-arrow">
+      <i class="fa-solid fa-arrow-down"></i>
     </div>
   </header>
   <a id="GroupProjects" class="py-16 opacity-0">a</a>
@@ -76,12 +83,10 @@
     Our Group Projects:
   </h1>
   <div id="navigator" class="mb-16">
-    <button id="leftArrow" class="arrow-button left"
-      onclick="slide('left'); smoothScroll(document.getElementById('GroupProjects'));">
+    <button id="leftArrow" class="arrow-button left" onclick="slide('left')">
       <i class="fa-solid fa-arrow-left"></i>
     </button>
-    <button id="rightArrow" class="arrow-button right"
-      onclick="slide('right'); smoothScroll(document.getElementById('GroupProjects'));">
+    <button id="rightArrow" class="arrow-button right" onclick="slide('right')">
       <i class="fa-solid fa-arrow-right"></i>
     </button>
     <div id="Panel" class="w-[100%] box-border self-center duration-500 px-5">
@@ -159,11 +164,5 @@
       </div>
     </div>
   </div>
-  <a href="https://coolors.co/264653-2a9d8f-e9c46a-f4a261-e76f51" class="text-white"> Color 1<br>
-  <a href="https://coolors.co/01161e-124559-598392-aec3b0-eff6e0" class="text-white"> Color 2<br>
-  <a href="https://coolors.co/007bff-ff4500-f5f5f5-333333-4e94f3" class="text-white"> Color 3<br>
-  <a href="https://coolors.co/2b2d42-8d99ae-edf2f4-ef233c-d80032" class="text-white"> Color 4<br>
-  <a href="https://coolors.co/02111b-3f4045-30292f-5d737e-fcfcfc" class="text-white"> Color 5<br>
-  <a href="https://coolors.co/000501-73ab84-99d19c-79c7c5-ade1e5" class="text-white"> Color 6<br>
 </body>
 </html>

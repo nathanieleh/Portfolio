@@ -27,4 +27,12 @@ IMPORTANT
 * find a way to run a script automatically to check if the video navigation updates
 * fix the mobile back to top bar not working and side scrolling
 
+COLORS
+* https://coolors.co/264653-2a9d8f-e9c46a-f4a261-e76f51
+* https://coolors.co/01161e-124559-598392-aec3b0-eff6e0
+* https://coolors.co/007bff-ff4500-f5f5f5-333333-4e94f3
+* https://coolors.co/2b2d42-8d99ae-edf2f4-ef233c-d80032
+* https://coolors.co/02111b-3f4045-30292f-5d737e-fcfcfc
+* https://coolors.co/000501-73ab84-99d19c-79c7c5-ade1e5
+
 * npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
