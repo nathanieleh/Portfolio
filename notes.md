@@ -34,5 +34,7 @@ COLORS
 * https://coolors.co/2b2d42-8d99ae-edf2f4-ef233c-d80032
 * https://coolors.co/02111b-3f4045-30292f-5d737e-fcfcfc
 * https://coolors.co/000501-73ab84-99d19c-79c7c5-ade1e5
+* https://coolors.co/000000-ff184e-49ff34-2893ff-f0cc18-c249ff
 
 * npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
+* npx serve
