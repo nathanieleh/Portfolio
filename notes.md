@@ -25,7 +25,9 @@
 
 IMPORTANT
 * find a way to run a script automatically to check if the video navigation updates
-* fix the mobile back to top bar not working and side scrolling
+* side scrolling
+* potentially make balls on the screen that are affected by gravity
+* add 
 
 COLORS
 * https://coolors.co/264653-2a9d8f-e9c46a-f4a261-e76f51

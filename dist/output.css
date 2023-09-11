@@ -559,12 +559,8 @@ video {
   margin-bottom: 4rem;
 }
 
-.ml-5 {
-  margin-left: 1.25rem;
-}
-
-.mr-5 {
-  margin-right: 1.25rem;
+.mt-10 {
+  margin-top: 2.5rem;
 }
 
 .mt-5 {
@@ -603,16 +599,8 @@ video {
   height: 100vh;
 }
 
-.max-h-\[100\%\] {
-  max-height: 100%;
-}
-
-.max-h-\[30\%\] {
-  max-height: 30%;
-}
-
-.max-h-\[300px\] {
-  max-height: 300px;
+.h-\[60vh\] {
+  height: 60vh;
 }
 
 .w-\[100\%\] {
@@ -644,6 +632,14 @@ video {
   grid-template-rows: repeat(2, minmax(0, 1fr));
 }
 
+.flex-row {
+  flex-direction: row;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
 .justify-items-center {
   justify-items: center;
 }
@@ -658,6 +654,10 @@ video {
 
 .rounded-full {
   border-radius: 9999px;
+}
+
+.border {
+  border-width: 1px;
 }
 
 .bg-black {
@@ -680,13 +680,9 @@ video {
   padding-right: 1.25rem;
 }
 
-.py-16 {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-}
-
-.pb-20 {
-  padding-bottom: 5rem;
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
 }
 
 .pb-5 {
@@ -695,6 +691,10 @@ video {
 
 .pl-5 {
   padding-left: 1.25rem;
+}
+
+.pt-10 {
+  padding-top: 2.5rem;
 }
 
 .pt-16 {
@@ -830,9 +830,25 @@ body {
 
 .names {
   font-family: "BeautySchoolDropout";
-  text-shadow: 1px 0 10px #00ff00;
+  margin: 0.1rem;
+  padding: 0.1rem;
+  border-radius: 1rem;
   /* display: inline; */
   font-size: clamp(1.25rem, 3vw, 5rem);
+}
+
+#Justin {
+  text-shadow: 1px 0 10px #ff0000;
+  border: 5px double #ff0000;
+  box-shadow: 0 0 25px #ff0000;
+  margin-right: 0.5rem;
+}
+
+#Nathaniel {
+  text-shadow: 1px 0 10px #00ff00;
+  border: 5px double #00ff00;
+  box-shadow: 0 0 25px #00ff00;
+  margin-left: 0.5rem;
 }
 
 #names-subtitle {
@@ -841,10 +857,14 @@ body {
 
 #intro-header {
   font-size: clamp(1.25rem, 2.5vw, 3.5rem);
+  border-top: 5px double #2893FF;
+  text-shadow: 1px 0 10px #ffff00;
 }
 
 #intro-subtext {
   font-size: clamp(0.75rem, 2vw, 3rem);
+  border-bottom: 5px double #2893FF;
+  text-shadow: 1px 0 10px #ffff00;
 }
 
 .descriptionText {
@@ -855,7 +875,17 @@ body {
   border-radius: 2rem;
   padding: 1rem;
   overflow-y: scroll;
-  max-height: 200px;
+  height: clamp(10rem, 20vw, 30rem);
+}
+
+#MinesweeperVideo {
+  aspect-ratio: 4/5;
+  width: min(50%, 20rem);
+}
+
+.descriptionMinesweeper {
+  height: clamp(100px, 50vh, 300px);
+  width: clamp(100px, 50vw, 300px)
 }
 
 .projectButton {

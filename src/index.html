@@ -75,87 +75,89 @@
       <i class="fa-solid fa-arrow-down"></i>
     </div>
   </header>
-  <a id="GroupProjects" class="py-16 opacity-0">a</a>
-  <h1 class="text-3xl text-white text-center underline pb-5">
-    Our Group Projects:
-  </h1>
-  <div id="navigator" class="mb-16">
-    <button id="leftArrow" class="arrow-button left" onclick="slide('left')">
-      <i class="fa-solid fa-arrow-left"></i>
-    </button>
-    <button id="rightArrow" class="arrow-button right" onclick="slide('right')">
-      <i class="fa-solid fa-arrow-right"></i>
-    </button>
-    <div id="Panel" class="w-[100%] box-border self-center duration-500 px-5">
-      <button class="projectButton text-3xl text-center text-white">
-        <a href="https://minesweeper-em9.pages.dev" target="_blank">
-          Minesweeper
-        </a>
+  <a id="GroupProjects" class="pt-10 opacity-0">a</a>
+  <div class="mt-10">
+    <h1 class="text-3xl text-white text-center underline pb-5">
+      Our Group Projects:
+    </h1>
+    <div id="navigator" class="mb-16">
+      <button id="leftArrow" class="arrow-button left" onclick="slide('left')">
+        <i class="fa-solid fa-arrow-left"></i>
       </button>
-      <br>
-      <div class="grid grid-cols-2 gap-5 justify-items-center max-h-[100%]">
-        <div class="descriptionText box-shading  ml-5 self-center max-h-[300px]">
-          It was an exciting project for us due to the both of us enjoying Minesweeper 
-          very much. We were inspired to create a website that we ourselves would love to 
-          use every day and we think we were somewhat successful at doing so. Overall, 
-          this was a great learning experience for the both of us due to how much knowledge 
-          we have gained about HTML, CSS, JS and React especially since this was our first
-          time working with the React framework.
-          <br>
-          <i class="fa-brands fa-html5"></i>
-          <i class="fa-brands fa-css3-alt"></i>
-          <i class="fa-brands fa-square-js"></i>
-          <i class="fa-brands fa-react"></i>
+      <button id="rightArrow" class="arrow-button right" onclick="slide('right')">
+        <i class="fa-solid fa-arrow-right"></i>
+      </button>
+      <div id="Panel" class="w-[100%] h-[60vh] box-border self-center duration-500 px-5">
+        <button class="projectButton text-3xl text-center text-white">
+          <a href="https://minesweeper-em9.pages.dev" target="_blank">
+            Minesweeper
+          </a>
+        </button>
+        <br>
+        <div class="flex gap-5 flex-row justify-center">
+          <div class="descriptionText descriptionMinesweeper">
+            It was an exciting project for us due to the both of us enjoying Minesweeper 
+            very much. We were inspired to create a website that we ourselves would love to 
+            use every day and we think we were somewhat successful at doing so. Overall, 
+            this was a great learning experience for the both of us due to how much knowledge 
+            we have gained about HTML, CSS, JS and React especially since this was our first
+            time working with the React framework.
+            <br>
+            <i class="fa-brands fa-html5"></i>
+            <i class="fa-brands fa-css3-alt"></i>
+            <i class="fa-brands fa-square-js"></i>
+            <i class="fa-brands fa-react"></i>
+          </div>
+          <img id="MinesweeperVideo" src="../img/MinesweeperDemo.gif">
         </div>
-        <img id="MinesweeperVideo" width="360" class="mr-5 box-shading" src="../img/MinesweeperDemo.gif">
       </div>
-    </div>
-    <div id="Panel" class="w-[100%] box-border self-center duration-500 px-5">
-      <div class="text-3xl text-center text-white">
-        SnakeAI
-      </div>
-      <br>
-      <div class="grid grid-cols-2 gap-5 justify-items-center mx-5 lg:gap-1">
-        <img id="SnakeAIVideo1" width="580" class="box-shading" src="../img/SnakeAIBeginner.gif">
-        <img id="SnakeAIVideo2" width="580" class="box-shading" src="../img/SnakeAIExpert.gif">
-      </div>
-      <br>
-      <div class="descriptionText  box-shading mx-5 max-h-[30%]">
-        This was the first instance of us working with AI utilizing packages such as 
-        PyTorch and numpy in order to present our first visual representation of the 
-        power AI and Deep Learning holds. This was thanks to a tutorial from 
-        FreeCodeCamp since we had no experience with these packages before this project.
-        We always felt inspired to work with machine learning models and completing this 
-        one in particular was somewhat grueling, but was ultimately worth it in the very end.
-        The Snake Game was borrowed from the person who hosted the tutorial and everything 
-        ran under the Python programming language.
+      <div id="Panel" class="w-[100%] box-border self-center duration-500 px-5">
+        <div class="text-3xl text-center text-white">
+          SnakeAI
+        </div>
         <br>
-        <i class="fa-brands fa-python"></i>
-      </div>
-    </div>
-    <div id="Panel" class="w-[100%] box-border self-center duration-500 px-5">
-      <div class="text-3xl text-center text-white">
-        3D AI
-      </div>
-      <br>
-      <div class="grid grid-cols-2 gap-5 justify-items-center mx-5">
-        <img id="threeDimVid1" width="770" src="../img/3DAIBeginner.gif">
-        <img id="threeDimVid2" width="770" src="../img/3DAIExpert.gif">
-      </div>
-      <br>
-      <div class="descriptionText box-shading max-h-[300px]">
-        After completing the Snake Game AI, we felt inspired to continue further 
-        into a different type of development that involved Unity as the environment.
-        This time, the user would interact with the cube and reach the goal as many times
-        before they fall off the map. This was our first Unity project together and we used
-        the ml-agents package for the reinforcement learning aspect of this new environment.
-        This was developed using C# as the main programming language.
+        <div class="grid grid-cols-2 gap-5 justify-items-center mx-5 lg:gap-1">
+          <img id="SnakeAIVideo1" style="aspect-ratio: 16/9;" src="../img/SnakeAIBeginner.gif">
+          <img id="SnakeAIVideo2" style="aspect-ratio: 16/9;" src="../img/SnakeAIExpert.gif">
+        </div>
         <br>
-        <i class="fa-brands fa-unity"></i>
+        <div class="descriptionText">
+          This was the first instance of us working with AI utilizing packages such as 
+          PyTorch and numpy in order to present our first visual representation of the 
+          power AI and Deep Learning holds. This was thanks to a tutorial from 
+          FreeCodeCamp since we had no experience with these packages before this project.
+          We always felt inspired to work with machine learning models and completing this 
+          one in particular was somewhat grueling, but was ultimately worth it in the very end.
+          The Snake Game was borrowed from the person who hosted the tutorial and everything 
+          ran under the Python programming language.
+          <br>
+          <i class="fa-brands fa-python"></i>
+        </div>
+      </div>
+      <div id="Panel" class="w-[100%] box-border self-center duration-500 px-5">
+        <div class="text-3xl text-center text-white">
+          3D AI
+        </div>
+        <br>
+        <div class="grid grid-cols-2 gap-5 justify-items-center mx-5">
+          <img id="threeDimVid1" style="aspect-ratio: 16/9;" src="../img/3DAIBeginner.gif">
+          <img id="threeDimVid2" style="aspect-ratio: 16/9;" src="../img/3DAIExpert.gif">
+        </div>
+        <br>
+        <div class="descriptionText">
+          After completing the Snake Game AI, we felt inspired to continue further 
+          into a different type of development that involved Unity as the environment.
+          This time, the user would interact with the cube and reach the goal as many times
+          before they fall off the map. This was our first Unity project together and we used
+          the ml-agents package for the reinforcement learning aspect of this new environment.
+          This was developed using C# as the main programming language.
+          <br>
+          <i class="fa-brands fa-unity"></i>
+        </div>
       </div>
     </div>
   </div>
-  <footer class="pt-5 pb-20 bg-gray-800 text-lg text-[#eff6e0]">
+  <footer class="py-5 bg-gray-800 text-lg text-[#eff6e0]">
     This site was made from scratch by the two of us!
     If you like what you see, you can message us on any of the socials provided at the top :)
   </footer>
