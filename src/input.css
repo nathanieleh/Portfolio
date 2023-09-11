@@ -2,254 +2,266 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --red: #ff184e;
+  --blue: #2893ff;
+  --green: #00ff00;
+}
+
 @font-face {
-    font-family: "BeautySchoolDropout";
-    src: url(fonts/BeautySchoolDropout.ttf) format('truetype');
+  font-family: "BeautySchoolDropout";
+  src: url(../fonts/BeautySchoolDropout.ttf) format("truetype");
 }
 
 body {
-    background-color: #000000;
-    position: relative;
+  background-color: #000000;
+  position: relative;
 }
 
 .nav-bar {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    grid-auto-flow: column;
-    position: sticky;
-    top: 0px;
-    padding-block: 1.25rem;
-    z-index: 99;
-    justify-items: center;
-    box-shadow: 0 0 20px #2893FF;
-    background-image: url('../img/BlueTopBar.jpg');
-    background-color: rgba(28, 93, 255, 0.2);
-    background-position: center;
-    background-blend-mode: lighten;
-    background-size: contain;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-auto-flow: column;
+  position: sticky;
+  height: 76px;
+  top: 0px;
+  z-index: 99;
+  justify-items: center;
+  align-items: center;
+  background-image: url("../img/Meteor.svg");
+  background-position: center;
+  background-blend-mode: lighten;
+  background-size: cover;
+  text-shadow: 1px 0 10px #ffff00;
 }
 
 #Title {
-    display: flex;
-    justify-content: center;
-    color: #eff6e0;
-    padding: 2rem 2rem 0rem 2rem; 
+  display: flex;
+  justify-content: center;
+  color: #eff6e0;
+  padding: 2rem 2rem 0rem 2rem;
 }
 
-/* #Socials {
-    display: flex;
-    justify-content: center;
-    gap: 10%;
-    color: #eff6e0;
-    max-width: 100vw;
-} */
-
 .names {
-    font-family: "BeautySchoolDropout";
-    margin: 0.1rem;
-    padding: 0.1rem;
-    border-radius: 1rem;
-    /* display: inline; */
-    font-size: clamp(1.25rem, 3vw, 5rem);
+  font-family: "BeautySchoolDropout";
+  margin: 0.1rem;
+  padding: 0.1rem;
+  border-radius: 1rem;
+  font-size: clamp(1.25rem, 3vw, 5rem);
 }
 
 #Justin {
-    text-shadow: 1px 0 10px #ff0000;
-    border: 5px double #ff0000;
-    box-shadow: 0 0 25px #ff0000;
-    margin-right: 0.5rem;
+  text-shadow: 1px 0 10px var(--red);
+  border: 5px double var(--red);
+  box-shadow: 0 0 25px var(--red);
+  margin-right: 0.5rem;
+  background-image: url(../img/JustinBG.svg);
+  animation: moving-background 20s alternate infinite ease-in-out;
 }
 
 #Nathaniel {
-    text-shadow: 1px 0 10px #00ff00;
-    border: 5px double #00ff00;
-    box-shadow: 0 0 25px #00ff00;
-    margin-left: 0.5rem;
+  text-shadow: 1px 0 10px var(--blue);
+  border: 5px double var(--blue);
+  box-shadow: 0 0 25px var(--blue);
+  margin-left: 0.5rem;
+  background-image: url(../img/NathanielBG.svg);
+  animation: moving-background 20s alternate-reverse infinite ease-in-out;
+}
+
+@keyframes moving-background {
+  from {
+    background-position: bottom left;
+  }
+  to {
+    background-position: top right;
+  }
 }
 
 #names-subtitle {
-    font-size: clamp(.8rem, 2vw, 2.5rem);
+  font-size: clamp(0.8rem, 2vw, 2.5rem);
+}
+
+#Intro {
+  border: 5px double var(--green);
+  border-left: none;
+  border-right: none;
+  box-shadow: 0 0 25px var(--green);
+  text-shadow: 1px 0 10px #ffff00;
 }
 
 #intro-header {
-    font-size: clamp(1.25rem, 2.5vw, 3.5rem);
-    border-top: 5px double #2893FF;
-    text-shadow: 1px 0 10px #ffff00;
+  font-size: clamp(1.25rem, 2.5vw, 3.5rem);
 }
 
 #intro-subtext {
-    font-size: clamp(0.75rem, 2vw, 3rem);
-    border-bottom: 5px double #2893FF;
-    text-shadow: 1px 0 10px #ffff00;
+  font-size: clamp(0.75rem, 2vw, 3rem);
 }
 
 .descriptionText {
-    font-size: clamp(.8rem, 2vw, 2.5rem);
-    color: whitesmoke;
-    background-color: rgb(76, 76, 76);
-    box-shadow: 0 0 25px #FF184E;
-    border-radius: 2rem;
-    padding: 1rem;
-    overflow-y: scroll;
-    height: clamp(10rem, 20vw, 30rem);
+  font-size: clamp(0.8rem, 2vw, 2rem);
+  color: #eff6e0;
+  background-color: rgb(76, 76, 76);
+  box-shadow: 0 0 25px var(--red);
+  border-radius: 2rem;
+  padding: 1rem;
+  overflow-y: scroll;
+  height: 30vh;
 }
 
 #MinesweeperVideo {
-    aspect-ratio: 4/5;
-    width: min(50%, 20rem);
+  aspect-ratio: 4/5;
+  width: min(50%, 20rem);
 }
 
 .descriptionMinesweeper {
-    height: clamp(100px, 50vh, 300px);
-    width: clamp(100px, 50vw, 300px)
+  height: clamp(100px, 30vh, 300px);
+  width: clamp(100px, 70vw, 800px);
 }
 
 .projectButton {
-    display: block;
-    margin: 0 auto;
-    padding: 0 0.5rem 0 0.5rem;
-    text-align: center;
-    background-color: rgb(59,83,92);
-    border-radius: 100vw;
-    transition: 0.5s ease-in-out;
-    box-shadow: -5px 5px /*rgb(12,45,59)*/ #aec3b0;
+  display: block;
+  margin: 0 auto;
+  padding: 0 0.5rem 0 0.5rem;
+  text-align: center;
+  background-color: rgb(59, 83, 92);
+  border-radius: 100vw;
+  transition: 0.5s ease-in-out;
+  box-shadow: -5px 5px #aec3b0;
 }
 
 .projectButton:hover {
-    transform: scale(1.05, 1.05);
-    background-color: rgb(34, 47, 51);
+  transform: scale(1.05, 1.05);
+  background-color: rgb(34, 47, 51);
 }
 
 #down-arrow {
-    position: absolute;
-    text-align: center;
-    bottom: 20%;
-    width: 100vw;
-    color: #eff6e0;
-    font-size: clamp(1.75rem, 3vw, 5rem);
-    animation: up-and-down 1s ease-in-out infinite alternate;
+  text-align: center;
+  width: 100vw;
+  color: #eff6e0;
+  font-size: clamp(1.75rem, 3vw, 5rem);
+  text-shadow: 1px 0 10px #ffff00;
+  animation: up-and-down 1s ease-in-out infinite alternate;
 }
 
 @keyframes up-and-down {
-    0% {
-        transform: translateY(10px);
-    }
-    100% {
-        transform: translateY(0px);
-    }
+  0% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 .arrow-button {
-    position: absolute;
-    justify-content: center;
-    align-self: center;
-    background-color: rgb(126, 126, 126);
-    color: rgb(255 255 255 / 1);
-    border-radius: 0.5rem;
-    padding: 0.75rem;
-    z-index: 50;
-    opacity: 60%;
-    transform: scale(1.5, 2);
-    transition-duration: 500ms;
+  position: absolute;
+  justify-content: center;
+  align-self: center;
+  background-color: rgb(126, 126, 126);
+  color: rgb(255 255 255 / 1);
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  z-index: 50;
+  opacity: 60%;
+  transform: scale(1.5, 2);
+  transition-duration: 500ms;
 }
 
 .arrow-button:hover {
-    opacity: 90%;
+  opacity: 90%;
 }
 
 .right {
-    right: 5%;
-    animation: right-and-back 1s ease-in-out infinite alternate;
+  right: 5%;
+  animation: right-and-back 1s ease-in-out infinite alternate;
 }
 .left {
-    left: 5%;
-    animation: left-and-back 1s ease-in-out infinite alternate;
+  left: 5%;
+  animation: left-and-back 1s ease-in-out infinite alternate;
 }
 
 @keyframes left-and-back {
-    0% {
-        left: 5%;
-    }
-    100% {
-        left: 6%;
-    }
+  0% {
+    left: 5%;
+  }
+  100% {
+    left: 6%;
+  }
 }
 
 @keyframes right-and-back {
-    0% {
-        right: 6%;
-    }
-    100% {
-        right: 7%;
-    }
+  0% {
+    right: 6%;
+  }
+  100% {
+    right: 7%;
+  }
 }
 
 .social-box {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-    border-radius: 0.75rem;
-    background-color: rgb(59,83,92);
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  border-radius: 0.75rem;
+  background-color: rgb(59, 83, 92);
 }
 
 ::-webkit-scrollbar {
-    background-color: rgb(140, 140, 140);
-    width: .3rem;
-    border-radius: 5rem;
+  background-color: rgb(140, 140, 140);
+  width: 0.3rem;
+  border-radius: 5rem;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: black;
-    border-radius: 5rem;
+  background-color: black;
+  border-radius: 5rem;
 }
 
 #TopBar {
-    transition: all 0.2s ease-in-out;
-    @media screen and (max-width: 450px) {
-        font-size: 1.25rem;
-    }
-    @media screen and (max-width: 380px) {
-        font-size: 0.95rem;
-    }
+  transition: all 0.2s ease-in-out;
+  @media screen and (max-width: 450px) {
+    font-size: 1.25rem;
+  }
+  @media screen and (max-width: 380px) {
+    font-size: 0.95rem;
+  }
 }
 
 #TopBar:hover {
-    font-size: 2rem;
-    @media screen and (max-width: 450px) {
-        font-size: 1.35rem;
-    }
-    @media screen and (max-width: 380px) {
-        font-size: 1.1rem;
-    }
+  font-size: 2rem;
+  @media screen and (max-width: 450px) {
+    font-size: 1.35rem;
+  }
+  @media screen and (max-width: 380px) {
+    font-size: 1.1rem;
+  }
 }
 
 #navigator {
-    display: grid;
-    margin-inline: 1.5rem;
-    padding-bottom: 5rem;
-    grid-auto-flow: column;
-    grid-auto-columns: 100%;
-    overflow: hidden;
-    overscroll-behavior-inline: contain;
+  display: grid;
+  margin-inline: 1.5rem;
+  padding-bottom: 15rem;
+  grid-auto-flow: column;
+  grid-auto-columns: 100%;
+  overflow: hidden;
+  overscroll-behavior-inline: contain;
 }
 
 #Panel {
-    height: 500px;
-    transition-duration: 1.5s;
-    transition-timing-function: cubic-bezier(0.68, -0.25, 0.265, 1.15);
+  height: 500px;
+  transition-duration: 1.5s;
+  transition-timing-function: cubic-bezier(0.68, -0.25, 0.265, 1.15);
+}
+
+#MinesweeperContent {
+  display: flex;
+  gap: 1.25rem;
+  flex-direction: row;
+  justify-content: center;
+  @media screen and (max-width: 570px) {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
 }
 
 header {
-    position: relative;
-    /* background-image: url("../img/BetterBGImage.jpg") ;
-    background-color: rgb(23, 23, 23);
-    background-repeat: no-repeat;
-    background-size: 50%;
-    background-position: center;
-    background-blend-mode: lighten;
-    @media screen and (max-width: 1000px) {
-        background-size: 80%;
-    }
-    @media screen and (max-width: 650px) {
-        background-size: 100%;
-    } */
+  position: relative;
 }

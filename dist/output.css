@@ -555,12 +555,12 @@ video {
   margin-right: 1.25rem;
 }
 
-.mb-16 {
-  margin-bottom: 4rem;
-}
-
 .mt-10 {
   margin-top: 2.5rem;
+}
+
+.mt-16 {
+  margin-top: 4rem;
 }
 
 .mt-5 {
@@ -577,10 +577,6 @@ video {
 
 .inline-block {
   display: inline-block;
-}
-
-.inline {
-  display: inline;
 }
 
 .flex {
@@ -630,14 +626,6 @@ video {
 
 .grid-rows-2 {
   grid-template-rows: repeat(2, minmax(0, 1fr));
-}
-
-.flex-row {
-  flex-direction: row;
-}
-
-.justify-center {
-  justify-content: center;
 }
 
 .justify-items-center {
@@ -691,14 +679,6 @@ video {
 
 .pl-5 {
   padding-left: 1.25rem;
-}
-
-.pt-10 {
-  padding-top: 2.5rem;
-}
-
-.pt-16 {
-  padding-top: 4rem;
 }
 
 .pt-5 {
@@ -785,10 +765,16 @@ video {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+:root {
+  --red: #ff184e;
+  --blue: #2893ff;
+  --green: #00ff00;
+}
+
 @font-face {
   font-family: "BeautySchoolDropout";
 
-  src: url(fonts/BeautySchoolDropout.ttf) format('truetype');
+  src: url(../fonts/BeautySchoolDropout.ttf) format("truetype");
 }
 
 body {
@@ -801,16 +787,16 @@ body {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   grid-auto-flow: column;
   position: sticky;
+  height: 76px;
   top: 0px;
-  padding-block: 1.25rem;
   z-index: 99;
   justify-items: center;
-  box-shadow: 0 0 20px #2893FF;
-  background-image: url('../img/BlueTopBar.jpg');
-  background-color: rgba(28, 93, 255, 0.2);
+  align-items: center;
+  background-image: url("../img/Meteor.svg");
   background-position: center;
   background-blend-mode: lighten;
-  background-size: contain;
+  background-size: cover;
+  text-shadow: 1px 0 10px #ffff00;
 }
 
 #Title {
@@ -820,62 +806,71 @@ body {
   padding: 2rem 2rem 0rem 2rem;
 }
 
-/* #Socials {
-    display: flex;
-    justify-content: center;
-    gap: 10%;
-    color: #eff6e0;
-    max-width: 100vw;
-} */
-
 .names {
   font-family: "BeautySchoolDropout";
   margin: 0.1rem;
   padding: 0.1rem;
   border-radius: 1rem;
-  /* display: inline; */
   font-size: clamp(1.25rem, 3vw, 5rem);
 }
 
 #Justin {
-  text-shadow: 1px 0 10px #ff0000;
-  border: 5px double #ff0000;
-  box-shadow: 0 0 25px #ff0000;
+  text-shadow: 1px 0 10px var(--red);
+  border: 5px double var(--red);
+  box-shadow: 0 0 25px var(--red);
   margin-right: 0.5rem;
+  background-image: url(../img/JustinBG.svg);
+  animation: moving-background 20s alternate infinite ease-in-out;
 }
 
 #Nathaniel {
-  text-shadow: 1px 0 10px #00ff00;
-  border: 5px double #00ff00;
-  box-shadow: 0 0 25px #00ff00;
+  text-shadow: 1px 0 10px var(--blue);
+  border: 5px double var(--blue);
+  box-shadow: 0 0 25px var(--blue);
   margin-left: 0.5rem;
+  background-image: url(../img/NathanielBG.svg);
+  animation: moving-background 20s alternate-reverse infinite ease-in-out;
+}
+
+@keyframes moving-background {
+  from {
+    background-position: bottom left;
+  }
+
+  to {
+    background-position: top right;
+  }
 }
 
 #names-subtitle {
-  font-size: clamp(.8rem, 2vw, 2.5rem);
+  font-size: clamp(0.8rem, 2vw, 2.5rem);
+}
+
+#Intro {
+  border: 5px double var(--green);
+  border-left: none;
+  border-right: none;
+  box-shadow: 0 0 25px var(--green);
+  text-shadow: 1px 0 10px #ffff00;
 }
 
 #intro-header {
   font-size: clamp(1.25rem, 2.5vw, 3.5rem);
-  border-top: 5px double #2893FF;
-  text-shadow: 1px 0 10px #ffff00;
 }
 
 #intro-subtext {
   font-size: clamp(0.75rem, 2vw, 3rem);
-  border-bottom: 5px double #2893FF;
-  text-shadow: 1px 0 10px #ffff00;
 }
 
 .descriptionText {
-  font-size: clamp(.8rem, 2vw, 2.5rem);
-  color: whitesmoke;
+  font-size: clamp(0.8rem, 2vw, 2rem);
+  color: #eff6e0;
   background-color: rgb(76, 76, 76);
-  box-shadow: 0 0 25px #FF184E;
+  box-shadow: 0 0 25px var(--red);
   border-radius: 2rem;
   padding: 1rem;
   overflow-y: scroll;
-  height: clamp(10rem, 20vw, 30rem);
+  height: 30vh;
 }
 
 #MinesweeperVideo {
@@ -884,8 +879,8 @@ body {
 }
 
 .descriptionMinesweeper {
-  height: clamp(100px, 50vh, 300px);
-  width: clamp(100px, 50vw, 300px)
+  height: clamp(100px, 30vh, 300px);
+  width: clamp(100px, 70vw, 800px);
 }
 
 .projectButton {
@@ -893,10 +888,10 @@ body {
   margin: 0 auto;
   padding: 0 0.5rem 0 0.5rem;
   text-align: center;
-  background-color: rgb(59,83,92);
+  background-color: rgb(59, 83, 92);
   border-radius: 100vw;
   transition: 0.5s ease-in-out;
-  box-shadow: -5px 5px /*rgb(12,45,59)*/ #aec3b0;
+  box-shadow: -5px 5px #aec3b0;
 }
 
 .projectButton:hover {
@@ -905,12 +900,11 @@ body {
 }
 
 #down-arrow {
-  position: absolute;
   text-align: center;
-  bottom: 20%;
   width: 100vw;
   color: #eff6e0;
   font-size: clamp(1.75rem, 3vw, 5rem);
+  text-shadow: 1px 0 10px #ffff00;
   animation: up-and-down 1s ease-in-out infinite alternate;
 }
 
@@ -976,12 +970,12 @@ body {
   font-size: 1.875rem;
   line-height: 2.25rem;
   border-radius: 0.75rem;
-  background-color: rgb(59,83,92);
+  background-color: rgb(59, 83, 92);
 }
 
 ::-webkit-scrollbar {
   background-color: rgb(140, 140, 140);
-  width: .3rem;
+  width: 0.3rem;
   border-radius: 5rem;
 }
 
@@ -1013,7 +1007,7 @@ body {
 #navigator {
   display: grid;
   margin-inline: 1.5rem;
-  padding-bottom: 5rem;
+  padding-bottom: 15rem;
   grid-auto-flow: column;
   grid-auto-columns: 100%;
   overflow: hidden;
@@ -1026,20 +1020,20 @@ body {
   transition-timing-function: cubic-bezier(0.68, -0.25, 0.265, 1.15);
 }
 
+#MinesweeperContent {
+  display: flex;
+  gap: 1.25rem;
+  flex-direction: row;
+  justify-content: center;
+  @media screen and (max-width: 570px) {
+    flex-direction: column-reverse;
+
+    align-items: center;
+  }
+}
+
 header {
   position: relative;
-  /* background-image: url("../img/BetterBGImage.jpg") ;
-    background-color: rgb(23, 23, 23);
-    background-repeat: no-repeat;
-    background-size: 50%;
-    background-position: center;
-    background-blend-mode: lighten;
-    @media screen and (max-width: 1000px) {
-        background-size: 80%;
-    }
-    @media screen and (max-width: 650px) {
-        background-size: 100%;
-    } */
 }
 
 .hover\:text-black:hover {
@@ -1047,9 +1041,14 @@ header {
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
-.hover\:text-sky-700:hover {
+.hover\:text-green-950:hover {
   --tw-text-opacity: 1;
-  color: rgb(3 105 161 / var(--tw-text-opacity));
+  color: rgb(5 46 22 / var(--tw-text-opacity));
+}
+
+.hover\:text-red-950:hover {
+  --tw-text-opacity: 1;
+  color: rgb(69 10 10 / var(--tw-text-opacity));
 }
 
 @media (min-width: 1024px) {
