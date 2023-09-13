@@ -125,15 +125,17 @@ const initialNavViewing = () => {
         hideArrows();
     }
 }
-
-const shapes = document.querySelectorAll("#shape");
-
-window.addEventListener("scroll", function(e) {
-    let scrollValue = window.scrollY;
-    shapes.forEach(element => {
-        let original = element.style.top.value;
-        element.style.top = "calc(10% + " + scrollValue * 1.05 + "px)";
-        element.style.rotate = scrollValue * 0.1 + "deg";
+document.querySelectorAll(".gif").forEach(element => {
+    element.addEventListener("mousemove", function(e){
+        let x = e.clientX - e.target.offsetLeft;
+        let y = e.clientY - e.target.offsetTop;
+        x = -1 * (x - 0.5 * element.clientWidth);
+        y = y - 0.5 * element.clientHeight;
+        element.style.transitionDuration = "0s";
+        element.style.transitionDelay = "0s";
+        element.style.transform = "scale(1.05, 1.05) rotateX(" + y * 0.01 + "deg) rotateY(" + x * 0.1 + "deg)";
     });
-    
+    element.addEventListener("mouseleave", function() {
+        element.style.transform = "none";
+    })
 });

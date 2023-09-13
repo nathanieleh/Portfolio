@@ -779,6 +779,7 @@ video {
   --green: #49FF34;
   --yellow: #F0CC18;
   --purple: #c249ff;
+  --dull: #414141;
   --text-color: #eff6e0;
 }
 
@@ -887,6 +888,7 @@ body {
 }
 
 #Intro {
+  background-color: black;
   border: 5px double var(--green);
   border-left: none;
   border-right: none;
@@ -915,6 +917,7 @@ h1 {
 
 .descriptionText {
   font-family: 'Raleway';
+  background-color: black;
   font-size: clamp(0.8rem, 2vw, 2rem);
   color: var(--text-color);
   box-shadow: 0 0 15px var(--green);
@@ -940,6 +943,7 @@ h1 {
 
 .projectButton {
   font-family: 'Raleway';
+  background-color: black;
   display: inline-block;
   padding-inline: 1rem;
   text-align: center;
@@ -1137,6 +1141,27 @@ header {
   left: 50%;
   background-color: var(--red);
   z-index: -1;
+}
+
+canvas {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+/* Small Devices, Tablets */
+
+@media only screen and (max-width : 768px) {
+  .animated {
+    /*CSS transitions*/
+    transition-property: none !important;
+    /*CSS transforms*/
+    transform: none !important;
+    /*CSS animations*/
+    animation: none !important;
+  }
 }
 
 .hover\:text-green-950:hover {

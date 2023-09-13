@@ -17,9 +17,19 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Open+Sans:wght@600&family=Raleway&display=swap" rel="stylesheet">
   <script src="script.js" defer></script>
+  <script type="module" src="three.js" defer></script>
+  <script async src="https://unpkg.com/es-module-shims@1.8.0/dist/es-module-shims.js"></script>
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@v0.156.1/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@v0.156.1/examples/jsm/"
+      }
+    }
+  </script>
 </head>
 <body id="Body">
-  <p id="shape" class="triangle"></p>
+  <!-- <p id="shape" class="triangle"></p> -->
   <nav class="nav-bar">
     <a id="TopBar" href="#Body" target="_self"
       class="text-white underline text-3xl">
@@ -72,7 +82,7 @@
         </div>
       </div>
     </div>
-    <div id="Intro" class="opacity-0 transition-all -translate-y-5 duration-[2000ms] ease-in-out">
+    <div id="Intro" class="dull-animation opacity-0 transition-all -translate-y-5 duration-[2000ms] ease-in-out">
       <div id="intro-header" class="px-3 text-center text-white">
         Welcome! We are twins aspiring to become software developers.
       </div>
@@ -81,7 +91,7 @@
         are currently working towards a B.S. in Mathematics-Computer Science...
       </div>
     </div>
-    <div id="down-arrow">
+    <div id="down-arrow" class="animated">
       <i class="fa-solid fa-arrow-down"></i>
     </div>
   </header>
@@ -91,10 +101,10 @@
       Our Group Projects:
     </h1>
     <div id="navigator">
-      <button id="leftArrow" class="arrow-button left" onclick="slide('left')">
+      <button id="leftArrow" class="arrow-button left animated" onclick="slide('left')">
         <i class="fa-solid fa-arrow-left"></i>
       </button>
-      <button id="rightArrow" class="arrow-button right" onclick="slide('right')">
+      <button id="rightArrow" class="arrow-button right animated" onclick="slide('right')">
         <i class="fa-solid fa-arrow-right"></i>
       </button>
       <div id="Panel" class="w-[100%] h-[60vh] box-border self-center duration-500 px-5">
@@ -134,7 +144,7 @@
             we have gained about HTML, CSS, JS and React especially since this was our first
             time working with the React framework.
           </div>
-          <img id="MinesweeperVideo" class="gif" src="../img/MinesweeperDemo.gif">
+          <img id="MinesweeperVideo" class="gif animated" src="../img/MinesweeperDemo.gif">
         </div>
       </div>
       <div id="Panel" class="w-[100%] box-border self-center duration-500 px-5">
@@ -146,8 +156,8 @@
         </a>
         <br>
         <div class="grid grid-cols-2 gap-5 justify-items-center mx-5 lg:gap-1">
-          <img id="SnakeAIVideo1" class="gif" style="aspect-ratio: 16/9;" src="../img/SnakeAIBeginner.gif">
-          <img id="SnakeAIVideo2" class="gif" style="aspect-ratio: 16/9;" src="../img/SnakeAIExpert.gif">
+          <img id="SnakeAIVideo1" class="gif animated" style="aspect-ratio: 16/9;" src="../img/SnakeAIBeginner.gif">
+          <img id="SnakeAIVideo2" class="gif animated" style="aspect-ratio: 16/9;" src="../img/SnakeAIExpert.gif">
         </div>
         <br>
         <div class="descriptionText">
@@ -183,8 +193,8 @@
         </a>
         <br>
         <div class="grid grid-cols-2 gap-5 justify-items-center mx-5">
-          <img id="threeDimVid1" class="gif" style="aspect-ratio: 16/9;" src="../img/3DAIBeginner.gif">
-          <img id="threeDimVid2" class="gif" style="aspect-ratio: 16/9;" src="../img/3DAIExpert.gif">
+          <img id="threeDimVid1" class="gif animated" style="aspect-ratio: 16/9;" src="../img/3DAIBeginner.gif">
+          <img id="threeDimVid2" class="gif animated" style="aspect-ratio: 16/9;" src="../img/3DAIExpert.gif">
         </div>
         <br>
         <div class="descriptionText">

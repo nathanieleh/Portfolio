@@ -14,12 +14,11 @@
 * 3DAI ran for 30 minutes before its showcase
 
 IMPORTANT
-* flicker animation of neon borders
-* limit use of key frames for mobile devices
+* popups getting cut off
 * 4K users >:(
-* parallax background
 * potentially make balls on the screen that are affected by gravity
 * add sound effects for users to hear from minesweeper
+* flicker animation of neon borders
 
 * npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
 * npx serve
