@@ -6,6 +6,7 @@
   <link href="../dist/output.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <script src="https://kit.fontawesome.com/04dadf6c21.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
   <script src="script.js" defer></script>
 </head>
 <body id="Body">
@@ -20,9 +21,9 @@
   </nav>
   <header class="h-[100vh]">
     <div id="Title">
-      <div id="Justin" class="names">
-        <image class="rounded-full inline-block w-[16.85%]" src="../img/SelfPortraitJustin.jpg">
-        Justin
+      <div id="Justin" class="names -translate-x-5 opacity-0 transition-all duration-[2000ms] ease-in-out">
+        <image class="rounded-full inline-block w-[20%]" style="aspect-ratio: 4/5;" src="../img/SelfPortraitJustin.jpg">
+          Justin
         <div id="names-subtitle">
           <div id="icons">
             <a href=mailto:"justinih2003@gmail.com" class="hover:text-red-950 duration-500" target="_blank">
@@ -35,14 +36,14 @@
               <i class="fa-brands fa-github"></i>
             </a>
           </div>
-          <a href="./Justin.html" class="hover:text-red-950 duration-500">
-            Justin's Projects
+          <a href="./Justin.html" class="hover:text-red-950 duration-500 border-y border-[#ff184e]">
+            Justin's Projects <i class="fa-solid fa-arrow-left"></i> 
           </a>
         </div>
       </div>
-      <div id="Nathaniel" class="names text-right">
-        Nathaniel 
-        <image class="rounded-full inline-block w-[15%]" src="../img/SelfPortraitNathaniel.jpg">
+      <div id="Nathaniel" class="names text-right translate-x-5 opacity-0 transition-all duration-[2000ms] ease-in-out">
+        Nathaniel
+        <image class="rounded-full inline-block w-[20%]" style="aspect-ratio: 4/5;" src="../img/SelfPortraitNathaniel.jpg">
         <div id="names-subtitle" class="text-right">
           <div id="icons">
             <a href=mailto:"nathanieleh@gmail.com" class="hover:text-green-950 duration-500" target="_blank">
@@ -55,19 +56,18 @@
               <i class="fa-brands fa-github"></i>
             </a>
           </div>
-          <a href="./Nathaniel.html" class="hover:text-green-950 duration-500">
-            Nathaniel's Projects
+          <a href="./Nathaniel.html" class="hover:text-green-950 duration-500 border-y border-[#2893ff]">
+            <i class="fa-solid fa-arrow-right"></i> Nathaniel's Projects
           </a>
         </div>
       </div>
     </div>
-    <div id="Intro" class="mt-16 opacity-0 transition-all -translate-y-5 duration-[2000ms] ease-in-out">
+    <div id="Intro" class="opacity-0 transition-all -translate-y-5 duration-[2000ms] ease-in-out">
       <div id="intro-header" class="px-3 text-center text-white">
         Welcome! We are twins aspiring to become software developers.
       </div>
-      <br>
       <div id="intro-subtext" class="px-3 text-center text-white">
-        Both of us are studying at the University of California San Diego and<br>
+        Both of us are studying at the University of California San Diego and 
         are currently working towards a B.S. in Mathematics-Computer Science...
       </div>
     </div>
@@ -88,40 +88,72 @@
         <i class="fa-solid fa-arrow-right"></i>
       </button>
       <div id="Panel" class="w-[100%] h-[60vh] box-border self-center duration-500 px-5">
-        <button class="projectButton text-3xl text-center text-white">
-          <a href="https://minesweeper-em9.pages.dev" target="_blank">
+        <a href="https://minesweeper-em9.pages.dev" class="flex flex-col mt-5" target="_blank">
+          <div class="projectButton text-3xl">
             Minesweeper
-          </a>
-        </button>
+            <i class="fa-solid fa-arrow-up-right-from-square text-white"></i>
+          </div>
+        </a>
+        <br>
         <br>
         <div id="MinesweeperContent">
           <div class="descriptionText descriptionMinesweeper">
+            Languages: 
+            <i class="fa-brands fa-html5 relative">
+              <div class="popup">HTML</div>
+            </i>
+            <i class="fa-brands fa-css3-alt relative">
+              <div class="popup">CSS</div>
+            </i>
+            <i class="fa-brands fa-square-js relative">
+              <div class="popup">JavaScript</div>
+            </i> | 
+            Framework: 
+            <i class="fa-brands fa-react relative">
+              <div class="popup">React</div>
+            </i> | 
+            Theme: 
+            <i class="fa-solid fa-gamepad relative">
+              <div class="popup font-medium">Game</div>
+            </i>
+            <hr>
             It was an exciting project for us due to the both of us enjoying Minesweeper 
             very much. We were inspired to create a website that we ourselves would love to 
             use every day and we think we were somewhat successful at doing so. Overall, 
             this was a great learning experience for the both of us due to how much knowledge 
             we have gained about HTML, CSS, JS and React especially since this was our first
             time working with the React framework.
-            <br>
-            <i class="fa-brands fa-html5"></i>
-            <i class="fa-brands fa-css3-alt"></i>
-            <i class="fa-brands fa-square-js"></i>
-            <i class="fa-brands fa-react"></i>
           </div>
-          <img id="MinesweeperVideo" src="../img/MinesweeperDemo.gif">
+          <img id="MinesweeperVideo" class="gif" src="../img/MinesweeperDemo.gif">
         </div>
       </div>
       <div id="Panel" class="w-[100%] box-border self-center duration-500 px-5">
-        <div class="text-3xl text-center text-white">
-          SnakeAI
-        </div>
+        <a href="https://github.com/nathanieleh/snakeAI/tree/main/Snake-Game-AI" class="flex flex-col mt-5" target="_blank">
+          <div class="projectButton text-3xl">
+            SnakeAI
+            <i class="fa-solid fa-arrow-up-right-from-square text-white"></i>
+          </div>
+        </a>
         <br>
         <div class="grid grid-cols-2 gap-5 justify-items-center mx-5 lg:gap-1">
-          <img id="SnakeAIVideo1" style="aspect-ratio: 16/9;" src="../img/SnakeAIBeginner.gif">
-          <img id="SnakeAIVideo2" style="aspect-ratio: 16/9;" src="../img/SnakeAIExpert.gif">
+          <img id="SnakeAIVideo1" class="gif" style="aspect-ratio: 16/9;" src="../img/SnakeAIBeginner.gif">
+          <img id="SnakeAIVideo2" class="gif" style="aspect-ratio: 16/9;" src="../img/SnakeAIExpert.gif">
         </div>
         <br>
         <div class="descriptionText">
+          Languages: 
+          <i class="devicon-python-plain relative">
+            <div class="popup">Python</div>
+          </i> | 
+          Framework: 
+          <i class="devicon-pytorch-original relative">
+            <div class="popup">PyTorch</div>
+          </i> | 
+          Theme: 
+          <i class="fa-solid fa-robot relative">
+            <div class="popup font-medium">Artificial Intelligence</div>
+          </i>
+          <hr>
           This was the first instance of us working with AI utilizing packages such as 
           PyTorch and numpy in order to present our first visual representation of the 
           power AI and Deep Learning holds. This was thanks to a tutorial from 
@@ -130,31 +162,42 @@
           one in particular was somewhat grueling, but was ultimately worth it in the very end.
           The Snake Game was borrowed from the person who hosted the tutorial and everything 
           ran under the Python programming language.
-          <br>
-          <i class="fa-brands fa-python"></i>
-          <i class="fa-solid fa-robot"></i>
         </div>
       </div>
       <div id="Panel" class="w-[100%] box-border self-center duration-500 px-5">
-        <div class="text-3xl text-center text-white">
-          3D AI
-        </div>
+        <a href="https://github.com/nathanieleh/3DAI/tree/main/Assets/Scripts" class="flex flex-col mt-5" target="_blank">
+          <div class="projectButton text-3xl">
+            3D AI
+            <i class="fa-solid fa-arrow-up-right-from-square text-white"></i>
+          </div>
+        </a>
         <br>
         <div class="grid grid-cols-2 gap-5 justify-items-center mx-5">
-          <img id="threeDimVid1" style="aspect-ratio: 16/9;" src="../img/3DAIBeginner.gif">
-          <img id="threeDimVid2" style="aspect-ratio: 16/9;" src="../img/3DAIExpert.gif">
+          <img id="threeDimVid1" class="gif" style="aspect-ratio: 16/9;" src="../img/3DAIBeginner.gif">
+          <img id="threeDimVid2" class="gif" style="aspect-ratio: 16/9;" src="../img/3DAIExpert.gif">
         </div>
         <br>
         <div class="descriptionText">
+          Languages: 
+          <i class="devicon-csharp-plain relative">
+            <div class="popup">C-Sharp</div>
+          </i> | 
+          Game Engine: 
+          <i class="devicon-unity-original relative">
+            <div class="popup">Unity</div>
+          </i> | 
+          Toolkit: ML-Agents | 
+          Theme: 
+          <i class="fa-solid fa-robot relative">
+            <div class="popup font-medium">Artificial Intelligence</div>
+          </i>
+          <hr>
           After completing the Snake Game AI, we felt inspired to continue further 
           into a different type of development that involved Unity as the environment.
           This time, the user would interact with the cube and reach the goal as many times
           before they fall off the map. This was our first Unity project together and we used
           the ml-agents package for the reinforcement learning aspect of this new environment.
           This was developed using C# as the main programming language.
-          <br>
-          <i class="fa-brands fa-unity"></i>
-          <i class="fa-solid fa-robot"></i>
         </div>
       </div>
     </div>

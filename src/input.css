@@ -5,7 +5,10 @@
 :root {
   --red: #ff184e;
   --blue: #2893ff;
-  --green: #00ff00;
+  --green: #49FF34;
+  --yellow: #F0CC18;
+  --purple: #c249ff;
+  --text-color: #eff6e0;
 }
 
 @font-face {
@@ -13,9 +16,15 @@
   src: url(../fonts/BeautySchoolDropout.ttf) format("truetype");
 }
 
+@font-face {
+  font-family: "BeautySchoolDropoutII";
+  src: url(../fonts/BeautySchoolDropoutII.ttf) format("truetype");
+}
+
 body {
   background-color: #000000;
   position: relative;
+  overflow-x: hidden;
 }
 
 .nav-bar {
@@ -32,22 +41,26 @@ body {
   background-position: center;
   background-blend-mode: lighten;
   background-size: cover;
-  text-shadow: 1px 0 10px #ffff00;
+  text-shadow: 1px 0 10px var(--yellow);
 }
 
 #Title {
   display: flex;
   justify-content: center;
-  color: #eff6e0;
+  color: var(--text-color);
   padding: 2rem 2rem 0rem 2rem;
 }
 
 .names {
   font-family: "BeautySchoolDropout";
+  width: min(40vw, 550px);
   margin: 0.1rem;
   padding: 0.1rem;
   border-radius: 1rem;
-  font-size: clamp(1.25rem, 3vw, 5rem);
+  font-size: clamp(1rem, 3vw, 5rem);
+  @media screen and (min-width: 2000px) {
+    background-size: cover;
+  }
 }
 
 #Justin {
@@ -56,7 +69,7 @@ body {
   box-shadow: 0 0 25px var(--red);
   margin-right: 0.5rem;
   background-image: url(../img/JustinBG.svg);
-  animation: moving-background 20s alternate infinite ease-in-out;
+  animation: moving-background 7.5s alternate infinite ease-in-out;
 }
 
 #Nathaniel {
@@ -65,7 +78,7 @@ body {
   box-shadow: 0 0 25px var(--blue);
   margin-left: 0.5rem;
   background-image: url(../img/NathanielBG.svg);
-  animation: moving-background 20s alternate-reverse infinite ease-in-out;
+  animation: moving-background 7.5s alternate-reverse infinite ease-in-out;
 }
 
 @keyframes moving-background {
@@ -78,7 +91,8 @@ body {
 }
 
 #names-subtitle {
-  font-size: clamp(0.8rem, 2vw, 2.5rem);
+  font-family: "BeautySchoolDropoutII";
+  font-size: clamp(0.5rem, 2vw, 2.5rem);
 }
 
 #Intro {
@@ -86,7 +100,8 @@ body {
   border-left: none;
   border-right: none;
   box-shadow: 0 0 25px var(--green);
-  text-shadow: 1px 0 10px #ffff00;
+  text-shadow: 1px 0 10px var(--yellow);
+  margin-top: 10vh;
 }
 
 #intro-header {
@@ -95,17 +110,26 @@ body {
 
 #intro-subtext {
   font-size: clamp(0.75rem, 2vw, 3rem);
+  margin-top: 2.5vh;
+}
+
+h1 {
+  color: var(--text-color);
+  text-shadow: 1px 0 10px var(--yellow);
 }
 
 .descriptionText {
   font-size: clamp(0.8rem, 2vw, 2rem);
-  color: #eff6e0;
-  background-color: rgb(76, 76, 76);
-  box-shadow: 0 0 25px var(--red);
+  color: var(--text-color);
+  box-shadow: 0 0 15px var(--green);
   border-radius: 2rem;
   padding: 1rem;
   overflow-y: scroll;
+  overflow-x: hidden;
   height: 30vh;
+  border-width: 3px;
+  border-color: var(--green);
+  border: 5px double var(--green);
 }
 
 #MinesweeperVideo {
@@ -119,27 +143,32 @@ body {
 }
 
 .projectButton {
-  display: block;
-  margin: 0 auto;
-  padding: 0 0.5rem 0 0.5rem;
+  display: inline-block;
+  padding-inline: 1rem;
   text-align: center;
-  background-color: rgb(59, 83, 92);
-  border-radius: 100vw;
+  color: var(--text-color);
+  border-width: 3px;
+  border-color: var(--yellow);
+  border-radius: 1rem;
   transition: 0.5s ease-in-out;
-  box-shadow: -5px 5px #aec3b0;
+  border: 5px double var(--yellow);
+  box-shadow: 0 0 15px var(--yellow);
+  @media screen and (max-width: 370px) {
+    font-size: 1.25rem;
+  }
 }
 
 .projectButton:hover {
-  transform: scale(1.05, 1.05);
-  background-color: rgb(34, 47, 51);
+  transform: scale(1.01, 1.01);
+  background-color: rgb(67, 67, 67);
 }
 
 #down-arrow {
   text-align: center;
   width: 100vw;
-  color: #eff6e0;
+  color: var(--text-color);
   font-size: clamp(1.75rem, 3vw, 5rem);
-  text-shadow: 1px 0 10px #ffff00;
+  text-shadow: 1px 0 10px var(--yellow);
   animation: up-and-down 1s ease-in-out infinite alternate;
 }
 
@@ -156,7 +185,7 @@ body {
   position: absolute;
   justify-content: center;
   align-self: center;
-  background-color: rgb(126, 126, 126);
+  border: 5px double var(--text-color);
   color: rgb(255 255 255 / 1);
   border-radius: 0.5rem;
   padding: 0.75rem;
@@ -167,6 +196,8 @@ body {
 }
 
 .arrow-button:hover {
+  text-shadow: 1px 0 10px var(--text-color);
+  box-shadow: 0 0 10px var(--text-color);
   opacity: 90%;
 }
 
@@ -205,18 +236,21 @@ body {
 }
 
 ::-webkit-scrollbar {
-  background-color: rgb(140, 140, 140);
-  width: 0.3rem;
+  opacity: 0%;
+  width: 0.5rem;
   border-radius: 5rem;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: black;
+  background: linear-gradient(var(--red), var(--blue));
   border-radius: 5rem;
 }
 
 #TopBar {
   transition: all 0.2s ease-in-out;
+  border-radius: .1rem;
+  padding: .1rem;
+  border: 1px solid white;
   @media screen and (max-width: 450px) {
     font-size: 1.25rem;
   }
@@ -251,6 +285,12 @@ body {
   transition-timing-function: cubic-bezier(0.68, -0.25, 0.265, 1.15);
 }
 
+.gif {
+  border-radius: 10px;
+  box-shadow: 0 0 10px var(--purple);
+  border: 5px double var(--purple);
+}
+
 #MinesweeperContent {
   display: flex;
   gap: 1.25rem;
@@ -260,6 +300,26 @@ body {
     flex-direction: column-reverse;
     align-items: center;
   }
+}
+
+i:hover > .popup {
+  opacity: 100%;
+}
+
+.popup {
+  position: absolute;
+  pointer-events: none;
+  font-size: min(2rem, 100%);
+  text-wrap: nowrap;
+  top: 100%;
+  left: -50%;
+  font-family: sans-serif;
+  padding: 0.25rem;
+  border-width: 1px;
+  opacity: 0%;
+  background-color: black;
+  transition-duration: 300ms;
+  z-index: 100;
 }
 
 header {
