@@ -125,3 +125,15 @@ const initialNavViewing = () => {
         hideArrows();
     }
 }
+
+const shapes = document.querySelectorAll("#shape");
+
+window.addEventListener("scroll", function(e) {
+    let scrollValue = window.scrollY;
+    shapes.forEach(element => {
+        let original = element.style.top.value;
+        element.style.top = "calc(10% + " + scrollValue * 1.05 + "px)";
+        element.style.rotate = scrollValue * 0.1 + "deg";
+    });
+    
+});

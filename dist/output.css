@@ -651,14 +651,14 @@ video {
   border-bottom-width: 1px;
 }
 
-.border-\[\#2893ff\] {
-  --tw-border-opacity: 1;
-  border-color: rgb(40 147 255 / var(--tw-border-opacity));
-}
-
 .border-\[\#ff184e\] {
   --tw-border-opacity: 1;
   border-color: rgb(255 24 78 / var(--tw-border-opacity));
+}
+
+.border-\[aqua\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 255 255 / var(--tw-border-opacity));
 }
 
 .bg-gray-800 {
@@ -721,6 +721,10 @@ video {
   font-weight: 500;
 }
 
+.italic {
+  font-style: italic;
+}
+
 .text-\[\#eff6e0\] {
   --tw-text-opacity: 1;
   color: rgb(239 246 224 / var(--tw-text-opacity));
@@ -771,7 +775,7 @@ video {
 
 :root {
   --red: #ff184e;
-  --blue: #2893ff;
+  --blue: aqua;
   --green: #49FF34;
   --yellow: #F0CC18;
   --purple: #c249ff;
@@ -779,15 +783,31 @@ video {
 }
 
 @font-face {
-  font-family: "BeautySchoolDropout";
+  font-family: 'BeautySchoolDropout';
 
-  src: url(../fonts/BeautySchoolDropout.ttf) format("truetype");
+  src: url('../fonts/BeautySchoolDropout.woff2') format('woff2'),
+  url('../fonts/BeautySchoolDropout.woff') format('woff'),
+  url('../fonts/BeautySchoolDropout.ttf') format('truetype');
+
+  font-weight: normal;
+
+  font-style: normal;
+
+  font-display: swap;
 }
 
 @font-face {
-  font-family: "BeautySchoolDropoutII";
+  font-family: 'BeautySchoolDropoutII';
 
-  src: url(../fonts/BeautySchoolDropoutII.ttf) format("truetype");
+  src: url('../fonts/BeautySchoolDropoutII.woff2') format('woff2'),
+  url('../fonts/BeautySchoolDropoutII.woff') format('woff'),
+  url('../fonts/BeautySchoolDropoutII.ttf') format('truetype');
+
+  fo-weight: normal;
+
+  font-style: normal;
+
+  font-display: swap;
 }
 
 body {
@@ -797,6 +817,7 @@ body {
 }
 
 .nav-bar {
+  font-family: 'Raleway';
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   grid-auto-flow: column;
@@ -821,7 +842,7 @@ body {
 }
 
 .names {
-  font-family: "BeautySchoolDropout";
+  font-family: "BeautySchoolDropoutII";
   width: min(40vw, 550px);
   margin: 0.1rem;
   padding: 0.1rem;
@@ -861,7 +882,7 @@ body {
 }
 
 #names-subtitle {
-  font-family: "BeautySchoolDropoutII";
+  font-family: "BeautySchoolDropout";
   font-size: clamp(0.5rem, 2vw, 2.5rem);
 }
 
@@ -875,20 +896,25 @@ body {
 }
 
 #intro-header {
+  font-family: 'Raleway';
   font-size: clamp(1.25rem, 2.5vw, 3.5rem);
 }
 
 #intro-subtext {
+  font-family: 'Raleway';
+  font-style: italic;
   font-size: clamp(0.75rem, 2vw, 3rem);
   margin-top: 2.5vh;
 }
 
 h1 {
+  font-family: 'Raleway';
   color: var(--text-color);
   text-shadow: 1px 0 10px var(--yellow);
 }
 
 .descriptionText {
+  font-family: 'Raleway';
   font-size: clamp(0.8rem, 2vw, 2rem);
   color: var(--text-color);
   box-shadow: 0 0 15px var(--green);
@@ -913,6 +939,7 @@ h1 {
 }
 
 .projectButton {
+  font-family: 'Raleway';
   display: inline-block;
   padding-inline: 1rem;
   text-align: center;
@@ -1099,6 +1126,17 @@ i:hover > .popup {
 
 header {
   position: relative;
+}
+
+.triangle {
+  position: absolute;
+  -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+          clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  padding: 1rem;
+  top: 10%;
+  left: 50%;
+  background-color: var(--red);
+  z-index: -1;
 }
 
 .hover\:text-green-950:hover {
