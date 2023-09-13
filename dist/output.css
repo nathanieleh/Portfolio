@@ -862,7 +862,7 @@ body {
   background-image: url(../img/JustinBG.svg);
   animation: moving-background 7.5s alternate infinite ease-in-out;
   @media screen and (max-width: 768px) {
-    animation: none;
+    animation: none !important;
   }
 }
 
@@ -874,7 +874,7 @@ body {
   background-image: url(../img/NathanielBG.svg);
   animation: moving-background 7.5s alternate-reverse infinite ease-in-out;
   @media screen and (max-width: 768px) {
-    animation: none;
+    animation: none !important;
   }
 }
 
