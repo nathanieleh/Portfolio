@@ -14,6 +14,7 @@
 * 3DAI ran for 30 minutes before its showcase
 
 IMPORTANT
+* flicker animation of neon borders
 * limit use of key frames for mobile devices
 * 4K users >:(
 * parallax background
