@@ -551,6 +551,11 @@ video {
   margin-right: 1.25rem;
 }
 
+.my-5 {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
 .mt-10 {
   margin-top: 2.5rem;
 }
@@ -581,6 +586,10 @@ video {
 
 .h-\[100vh\] {
   height: 100vh;
+}
+
+.w-3\/4 {
+  width: 75%;
 }
 
 .w-\[100\%\] {
@@ -620,6 +629,10 @@ video {
 
 .flex-col {
   flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
 }
 
 .justify-items-center {
@@ -826,11 +839,15 @@ body {
 
 .names {
   font-family: "BeautySchoolDropoutII";
+  color: var(--text-color);
   width: min(40vw, 550px);
   margin: 0.1rem;
   padding: 0.1rem;
   border-radius: 1rem;
-  font-size: clamp(1rem, 5vw, 5rem);
+  font-size: 5rem;
+  @media screen and (max-width: 880px) {
+    font-size: 2.5rem;
+  }
   @media screen and (min-width: 2000px) {
     background-size: cover;
   }
@@ -876,7 +893,10 @@ body {
 
 #names-subtitle {
   font-family: "BeautySchoolDropout";
-  font-size: clamp(0.5rem, 3vw, 2.5rem);
+  font-size: 2.5rem;
+  @media screen and (max-width: 880px) {
+    font-size: 1rem;
+  }
 }
 
 #Intro {
@@ -946,6 +966,7 @@ h1 {
   transition: 0.5s ease-in-out;
   border: 5px double var(--yellow);
   box-shadow: 0 0 15px var(--yellow);
+  animation: ping 1s ease-in-out infinite alternate;
   @media screen and (max-width: 370px) {
     font-size: 1.25rem;
   }
@@ -1022,6 +1043,13 @@ h1 {
 
   100% {
     right: 7%;
+  }
+}
+
+@keyframes ping {
+  75%, 100% {
+    transform: scale(0.975);
+    opacity: 90;
   }
 }
 
@@ -1176,18 +1204,29 @@ footer {
   line-height: 1.75rem;
 }
 
-/* Small Devices, Tablets */
-
+/* Small Devices, Tablets*
 @media only screen and (max-width : 768px) {
-  .animated {
-    /*CSS transitions*/
-    transition-property: none !important;
-    /*CSS transforms*/
-    transform: none !important;
-    /*CSS animations*/
-    animation: none !important;
-  }
-}
+	.animated {
+		/*CSS transitions*
+		-o-transition-property: none !important;
+		-moz-transition-property: none !important;
+		-ms-transition-property: none !important;
+		-webkit-transition-property: none !important;
+		transition-property: none !important;
+		/*CSS transforms*
+		-o-transform: none !important;
+		-moz-transform: none !important;
+		-ms-transform: none !important;
+		-webkit-transform: none !important;
+		transform: none !important;
+		/*CSS animations*
+		-webkit-animation: none !important;
+		-moz-animation: none !important;
+		-o-animation: none !important;
+		-ms-animation: none !important;
+		animation: none !important;
+	}
+}*/
 
 .hover\:text-green-950:hover {
   --tw-text-opacity: 1;

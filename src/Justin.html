@@ -5,35 +5,99 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://kit.fontawesome.com/04dadf6c21.js" crossorigin="anonymous"></script>
   <link href="../dist/output.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Open+Sans:wght@600&family=Raleway&display=swap" rel="stylesheet">
+  <script defer src="justin.js"></script>
 </head>
 <body>
   <nav class="nav-bar">
-    <a id="TopBar" href="./index.html" target="_self" class="text-white underline text-2xl">
-      HOME
+    <a id="TopBar" href="/src/" target="_self" class="text-white underline text-2xl">
+      BACK TO HOME
+    </a>
+    <a id="TopBar" href="#Body" target="_self"
+      class="text-white underline text-2xl">
+      BACK TO TOP
     </a>
   </nav>
-  <h1 class="text-5xl text-center underline text-white mt-5">
-    Justin
-  </h1>
-  <div class="grid grid-cols-2 grid-rows-2 gap-5 mx-5 mt-5 justify-items-center">
-    <img width="320" height="400" class="gif" src="../img/BrickBreaker.gif">
-    <img width="320" height="400" class="gif" src="../img/SnakeGame.gif">
-    <div>
-      <a href="https://sh0ckwave473.itch.io/brick-breaker" class="flex flex-col mt-5" target="_blank">
-        <div class="projectButton text-3xl">
-          Brick Breaker
-          <i class="fa-solid fa-arrow-up-right-from-square text-white"></i>
+  <div id="Justin" class="names w-3/4 -translate-x-5 opacity-0 transition-all duration-[2000ms] ease-in-out"
+  style="margin: auto; margin-top: 2rem;">
+    <image class="rounded-full inline-block w-[20%]" style="aspect-ratio: 4/5;" src="../img/SelfPortraitJustin.jpg">
+      Justin
+    <div id="names-subtitle">
+      <div id="icons">
+        <a href=mailto:"justinih2003@gmail.com" class="hover:text-red-950 duration-500" target="_blank">
+          <i class="fa-regular fa-envelope"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/justin-hernandez-aa485b270/" class="hover:text-red-950 duration-500" target="_blank">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/Sh0ckWave473" class="hover:text-red-950 duration-500" target="_blank">
+          <i class="fa-brands fa-github"></i>
+        </a>
+      </div>
+      <a href="./Justin.html" class="hover:text-red-950 duration-500 border-y border-[#ff184e]">
+        Justin's Projects <i class="fa-solid fa-arrow-left"></i> 
+      </a>
+    </div>
+  </div>
+  <div class="flex flex-col items-center gap-5 my-5">
+    <div class="projectButton w-[100%]">
+      <a href="https://sh0ckwave473.itch.io/brick-breaker" target="_blank">
+        <div class="text-3xl">
+          Play Brick Breaker
+          <i class="fa-solid fa-play"></i>
         </div>
       </a>
     </div>
-    <div>
-      <a href="https://sh0ckwave473.itch.io/free-roam-snake-game" class="flex flex-col mt-5" target="_blank">
-        <div class="projectButton text-3xl">
-          Snake Game
-          <i class="fa-solid fa-arrow-up-right-from-square text-white"></i>
+    <img width="320" height="400" class="gif" src="../img/BrickBreaker.gif">
+    <div class="descriptionText">
+      Language: 
+      <i class="devicon-csharp-plain relative">
+        <div class="popup">C-Sharp</div>
+      </i> | 
+      Game Engine: 
+      <i class="devicon-unity-original relative">
+        <div class="popup">Unity</div>
+      </i> | 
+      Theme: 
+      <i class="fa-solid fa-gamepad relative">
+        <div class="popup font-medium">Game</div>
+      </i>
+      <hr>
+      This is a small game that I created by following a YouTube tutorial by
+      Scripting Is Fun. I was bored while I was at UCSD so I decided that I should dip
+      my foot into game development and I had a fun time learning how to utilize
+      Unity's features. I did not add anything of value to this product and 
+      this was solely meant for me to get used to the Unity environment and C#.
+    </div>
+    <div class="projectButton w-[100%]">
+      <a href="https://sh0ckwave473.itch.io/free-roam-snake-game" target="_blank">
+        <div class="text-3xl">
+          Play Snake Game
+          <i class="fa-solid fa-play"></i>
         </div>
       </a>
+    </div>
+    <img width="320" height="400" class="gif" src="../img/SnakeGame.gif">
+    <div class="descriptionText">
+      Language: 
+      <i class="devicon-csharp-plain relative">
+        <div class="popup">C-Sharp</div>
+      </i> | 
+      Game Engine: 
+      <i class="devicon-unity-original relative">
+        <div class="popup">Unity</div>
+      </i> | 
+      Theme: 
+      <i class="fa-solid fa-gamepad relative">
+        <div class="popup font-medium">Game</div>
+      </i>
+      <hr>
+      I started developing this small game soon after I finished the tutorial on Brick Breaker.
+      This project was meant for me to take what I have learned from the recent tutorial and
+      apply that knowledge to a product of my own. There are still features I can optimize, but
+      I decided to leave it in the state it is in right now because I wanted to tackle greater
+      projects such as our Minesweeper website.
     </div>
   </div>
   <footer>
