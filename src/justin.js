@@ -36,15 +36,13 @@ const fadeIntro = () => {
 
 document.querySelectorAll(".gif").forEach(element => {
     element.addEventListener("mousemove", function(e){
-        let x = e.clientX - e.target.offsetLeft;
-        let y = e.clientY - e.target.offsetTop;
-        x = -1 * (x - 0.5 * element.clientWidth);
-        y = y - 0.5 * element.clientHeight;
-        element.style.transitionDuration = "0s";
-        element.style.transitionDelay = "0s";
-        element.style.transform = "scale(1.05, 1.05) rotateX(" + y * 0.01 + "deg) rotateY(" + x * 0.1 + "deg)";
+        let x = -1 * (e.offsetX - 0.5 * element.clientWidth);
+        let y = e.offsetY - 0.5 * element.clientHeight;
+        element.style.transition = "0s";
+        element.style.transform = "scale(1.05) rotateX(" + y * 0.15 + "deg) rotateY(" + x * 0.15 + "deg)";
     });
     element.addEventListener("mouseleave", function() {
+        element.style.transition = "0.3s";
         element.style.transform = "none";
     })
 });

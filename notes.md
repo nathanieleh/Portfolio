@@ -14,14 +14,8 @@
 * 3DAI ran for 30 minutes before its showcase
 
 IMPORTANT
-* click down arrow to scroll down
-* increase name text size for mobile
-* have project titles pulsing for clickability?
 * aspect ratio is a bigger problem (octahedron)
 * popups getting cut off
-* 4K users >:(
-* potentially make balls on the screen that are affected by gravity
-* add sound effects for users to hear from minesweeper
 * flicker animation of neon borders
 
 * npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
